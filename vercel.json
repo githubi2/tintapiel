@@ -1,5 +1,11 @@
 {
-  "trailingSlash": true,
+  "redirects": [
+    { "source": "/pricing", "destination": "/pricing/", "permanent": true },
+    { "source": "/tools/probador", "destination": "/tools/probador/", "permanent": true },
+    { "source": "/tatuaje-de-leon-en-la-pierna-para-mujer", "destination": "/tatuaje-de-leon-en-la-pierna-para-mujer/", "permanent": true },
+    { "source": "/tatuaje-de-leona-en-la-pierna", "destination": "/tatuaje-de-leona-en-la-pierna/", "permanent": true },
+    { "source": "/tatuajes-de-leones-en-la-pierna", "destination": "/tatuajes-de-leones-en-la-pierna/", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/api/v1/:path*", "destination": "https://admin.tintapiel.com/api/v1/:path*" }
   ]
