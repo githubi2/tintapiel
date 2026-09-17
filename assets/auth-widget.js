@@ -109,7 +109,7 @@
   }
 
   // ===== Google 一键登录（GIS 懒加载；与 PixPurge 共用同一 OAuth client）=====
-  var gsiInited = false;
+  var gsiInited = false, gsiDrawn = '';
   function ensureGSI() {
     if (d.getElementById('tt-gsi')) return;
     var s = d.createElement('script');
@@ -120,6 +120,7 @@
   }
   function gsiRender() {
     if (!window.google || !google.accounts || !google.accounts.id) return false;
+    if (gsiDrawn === authMode) return true; // 已画过（同模式）不重画——防止打开弹窗时反复清空重画导致闪烁
     if (!gsiInited) {
       try { google.accounts.id.initialize({ client_id: GOOGLE_CLIENT_ID, callback: onGoogleCred }); gsiInited = true; }
       catch (e) { return false; }
@@ -130,6 +131,7 @@
       try {
         google.accounts.id.renderButton(slot, { theme: 'outline', size: 'large', shape: 'pill', width: 199 /* <200：禁用 Google 个性化按钮（官方条件），勿调大 */, locale: 'es', text: authMode === 'login' ? 'signin_with' : 'signup_with' });
         d.getElementById('gBox').hidden = false;
+        gsiDrawn = authMode;
       } catch (e) { /* GIS 渲染失败时保留邮箱登录方式 */ }
     }
     return true;
@@ -258,6 +260,15 @@
   renderNavLogin();
   // 旧入口/收藏带 ?login=1：就地弹窗
   try { if (!getToken() && /[?&]login=1/.test(location.search)) { openAuth('login'); } } catch (e) { }
+
+  // ===== 预加载 GIS（空闲/首次交互）→ 首次打开弹窗按钮已就绪，不闪 =====
+  var warmed = false;
+  function warmGSI() { if (warmed) return; warmed = true; scheduleGSI(); }
+  try {
+    setTimeout(warmGSI, 3000);
+    d.addEventListener('pointerdown', warmGSI, { once: true });
+    d.addEventListener('keydown', warmGSI, { once: true });
+  } catch (e) { }
 
   window.__ttAuth = true;
   window.TTAuth = { open: openAuth, close: closeAuth, loggedIn: function () { return !!getToken(); } };

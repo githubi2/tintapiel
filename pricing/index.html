@@ -307,9 +307,10 @@ footer{margin-top:clamp(2.6rem,6vw,4rem);border-top:1px solid var(--line);backgr
 
   // ===== Google 一键登录（GIS，与 PixPurge 共用同一 OAuth client）=====
   var GOOGLE_CLIENT_ID = '547189163396-lgqbc3ucvpejdeg9lndjcn8u9tbge8e8.apps.googleusercontent.com';
-  var gsiInited = false;
+  var gsiInited = false, gsiDrawn = '';
   function gsiRender(){
     if (!window.google || !google.accounts || !google.accounts.id) return false;
+    if (gsiDrawn === authMode) return true; // 已画过（同模式）不重画——防止打开弹窗时反复清空重画导致闪烁
     if (!gsiInited){
       try { google.accounts.id.initialize({ client_id: GOOGLE_CLIENT_ID, callback: onGoogleCred }); gsiInited = true; }
       catch (e) { return false; }
@@ -320,6 +321,7 @@ footer{margin-top:clamp(2.6rem,6vw,4rem);border-top:1px solid var(--line);backgr
       try {
         google.accounts.id.renderButton(slot, { theme: 'outline', size: 'large', shape: 'pill', width: 199 /* <200：禁用 Google 个性化按钮（官方条件），勿调大 */, locale: 'es', text: authMode === 'login' ? 'signin_with' : 'signup_with' });
         document.getElementById('gBox').hidden = false;
+        gsiDrawn = authMode;
       } catch (e) { /* GIS 渲染失败时保留邮箱登录方式 */ }
     }
     return true;
