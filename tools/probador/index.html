@@ -214,7 +214,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:17px;heigh
 <div class="filewarn" id="fileWarn" hidden>
   <strong>Modo archivo local (file://)</strong> &mdash; el navegador bloquea el procesado de imágenes en este modo.
   Para descargar y usar el efecto real con IA, ábrelo con el servidor:
-  <a class="fw-btn" href="http://127.0.0.1:8000/tools/probador/">Abrir la versión completa &rarr;</a>
+  <a class="fw-btn" href="https://tintapiel.com/tools/probador/">Abrir la versión completa &rarr;</a>
 </div>
 
 <div class="app">
@@ -839,7 +839,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:17px;heigh
   // ===== 导出（带选中框的临时重绘规避：导出瞬时不留虚线框） =====
   document.getElementById('bExport').addEventListener('click', function(){
     if (!photo) { setStatus('Primero elige una foto.', true); return; }
-    if (fileMode) { setStatus('Modo archivo local: el navegador bloquea la exportación. Abre la página con http://127.0.0.1:8000/tools/probador/ (o desde la web).', true); return; }
+    if (fileMode) { setStatus('Modo archivo local: el navegador bloquea la exportación. Abre esta página desde la web (tintapiel.com) o con un servidor local.', true); return; }
     draw(true);
     var url = cv.toDataURL('image/png');
     draw(false);
@@ -1012,13 +1012,13 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:17px;heigh
   bAI.addEventListener('click', function(){
     if (!photo || !layers.length) { setStatus('Elige una foto y coloca al menos un diseño.', true); return; }
     if (!getToken()){ setStatus('Inicia sesión para usar el efecto real con IA.', true); openAuth('login'); return; }
-    if (fileMode) { setStatus('Modo archivo local: el navegador bloquea el procesado de imágenes. Abre la página con http://127.0.0.1:8000/tools/probador/ (o desde la web).', true); return; }
+    if (fileMode) { setStatus('Modo archivo local: el navegador bloquea el procesado de imágenes. Abre esta página desde la web (tintapiel.com) o con un servidor local.', true); return; }
     var dataUrl;
     draw(true);
     try { dataUrl = cv.toDataURL('image/png'); }
     catch (e) {
       draw(false);
-      setStatus('Modo archivo local: el navegador bloquea el procesado de imágenes. Abre la página con http://127.0.0.1:8000/tools/probador/ (o desde la web).', true);
+      setStatus('Modo archivo local: el navegador bloquea el procesado de imágenes. Abre esta página desde la web (tintapiel.com) o con un servidor local.', true);
       return;
     }
     draw(false);
