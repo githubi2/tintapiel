@@ -1,0 +1,6 @@
+{
+  "trailingSlash": true,
+  "rewrites": [
+    { "source": "/api/v1/:path*", "destination": "https://admin.tintapiel.com/api/v1/:path*" }
+  ]
+}

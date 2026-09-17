@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planes y Créditos: Probador de Tatuajes con IA | Tinta Piel</title>
+<meta name="description" content="Elige tu plan de créditos para probar tatuajes con efecto real sobre tu foto: semanal, mensual o pase anual. Pago seguro con tarjeta.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tinta Piel">
+<meta property="og:title" content="Planes y Créditos: Probador de Tatuajes con IA | Tinta Piel">
+<meta property="og:description" content="Elige tu plan de créditos para probar tatuajes con efecto real sobre tu foto: semanal, mensual o pase anual. Pago seguro con tarjeta.">
+<meta property="og:url" content="https://tintapiel.com/pricing/">
+<meta property="og:image" content="https://tintapiel.com/pricing/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Planes y Créditos: Probador de Tatuajes con IA | Tinta Piel">
+<meta name="twitter:description" content="Elige tu plan de créditos para probar tatuajes con efecto real sobre tu foto: semanal, mensual o pase anual. Pago seguro con tarjeta.">
+<meta name="twitter:image" content="https://tintapiel.com/pricing/og-image.png">
+<link rel="canonical" href="https://tintapiel.com/pricing/">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314110D'/%3E%3Cpath d='M16 7c0 0-5.4 7.2-5.4 11.2a5.4 5.4 0 0 0 10.8 0C21.4 14.2 16 7 16 7Z' fill='%23C98A26'/%3E%3Cpath d='M8.5 25.6c2.6-1.7 5.1-2.5 7.5-2.5s4.9.8 7.5 2.5' stroke='%23C98A26' stroke-width='2' stroke-linecap='round' fill='none' opacity='.85'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F3EB; --surface:#FCFBF7; --ink:#1B1710; --ink-2:#4E483C; --muted:#8B8372;
+  --line:#E2DCCB; --line-2:#CFC8B2; --accent:#C98A26; --accent-deep:#9E6C16; --accent-soft:#F2E7CE;
+  --serif:"Playfair Display",Georgia,"Times New Roman",serif;
+  --sans:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r-card:14px; --r-ctrl:9px;
+  --shadow-1:0 1px 2px rgba(27,23,16,.05),0 14px 34px -16px rgba(27,23,16,.13);
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(14px,3vw,28px)}
+
+/* ---- nav ---- */
+.nav{position:sticky;top:0;z-index:50;background:rgba(246,243,235,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:14px;max-width:1120px;margin:0 auto;padding:10px clamp(14px,3vw,28px)}
+.brand{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800}
+.bmark{width:26px;height:26px;color:var(--ink)}
+.btxt{font-family:var(--serif);font-size:1.02rem}
+.btxt em{color:var(--accent);font-style:normal}
+.bsub{font-size:.62rem;color:var(--muted);font-weight:600;margin-left:2px}
+.nav-links{display:flex;align-items:center;gap:2px;flex-wrap:wrap}
+.nav-link{font-size:.78rem;font-weight:700;text-decoration:none;color:var(--ink-2);padding:.42rem .6rem;border-radius:8px}
+.nav-link:hover{background:var(--accent-soft);color:var(--accent-deep)}
+.nav-link.nav-link-active{background:var(--ink);color:#F6F2E8}
+
+/* ---- hero ---- */
+.hero{padding:clamp(2.2rem,5vw,3.6rem) 0 1.2rem;text-align:center}
+.kicker{display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-deep);background:var(--accent-soft);border:1px solid #E7D5AC;border-radius:999px;padding:.34rem .8rem;margin-bottom:14px}
+h1{font-family:var(--serif);font-size:clamp(1.9rem,4.4vw,2.7rem);line-height:1.15;margin:0 0 .6rem;font-weight:800}
+.hero p{max-width:620px;margin:0 auto;color:var(--ink-2);font-size:.98rem}
+.authbar{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:16px;min-height:26px}
+.authbar .who{font-size:.78rem;font-weight:700;color:var(--ink-2)}
+.authbar .crd{font-size:.78rem;font-weight:800;color:var(--accent-deep);background:var(--accent-soft);border-radius:999px;padding:.22rem .6rem}
+.authbar button{font:inherit;font-size:.75rem;font-weight:700;border:1.5px solid var(--line-2);background:#fff;color:var(--ink-2);border-radius:8px;padding:.34rem .7rem;cursor:pointer}
+.authbar button:hover{border-color:var(--accent);color:var(--accent-deep)}
+.authbar a.rec{font-size:.75rem;font-weight:800;color:var(--accent-deep);text-decoration:none;border-bottom:1.5px solid currentColor;padding-bottom:1px}
+
+/* ---- plans ---- */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:1.6rem 0 .6rem;align-items:stretch}
+.card{position:relative;display:flex;flex-direction:column;background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r-card);padding:22px 20px 20px;box-shadow:var(--shadow-1)}
+.card.hot{border-color:var(--accent);box-shadow:0 2px 5px rgba(27,23,16,.05),0 22px 48px -22px rgba(201,138,38,.45)}
+.pbadge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);font-size:.66rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:#F6F2E8;border-radius:999px;padding:.3rem .75rem;white-space:nowrap}
+.card.hot .pbadge{background:var(--accent);color:#241A05}
+.pbadge.ghost{background:var(--accent-soft);color:var(--accent-deep);border:1px solid #E7D5AC}
+.ptitle{font-family:var(--serif);font-size:1.42rem;font-weight:800;margin:6px 0 0;text-align:center}
+.psub{font-size:.78rem;color:var(--muted);text-align:center;margin:.1rem 0 14px;font-weight:600}
+.pprice{text-align:center;margin-bottom:2px}
+.pprice .num{font-family:var(--serif);font-size:2.4rem;font-weight:800;letter-spacing:-.01em}
+.pprice .unit{font-size:.85rem;color:var(--muted);font-weight:700}
+.pprice .orig{font-size:.8rem;color:var(--muted);text-decoration:line-through;margin-left:6px}
+.pprice .off{font-size:.72rem;font-weight:800;color:#8A5A0B;background:var(--accent-soft);border-radius:999px;padding:.14rem .5rem;margin-left:6px}
+.pcredits{text-align:center;font-size:.9rem;font-weight:800;color:var(--accent-deep)}
+.pmeta{text-align:center;font-size:.74rem;color:var(--muted);font-weight:600;margin-top:2px}
+.pper{text-align:center;font-size:.72rem;color:var(--muted);margin-top:2px}
+.pfeats{list-style:none;margin:16px 0 18px;padding:14px 0 0;border-top:1px dashed var(--line-2);display:flex;flex-direction:column;gap:8px;flex:1}
+.pfeats li{font-size:.83rem;color:var(--ink-2);display:flex;gap:8px;align-items:flex-start}
+.pfeats li::before{content:"✓";color:var(--accent-deep);font-weight:800;flex:none}
+.pbtn{font:inherit;font-size:.86rem;font-weight:800;border-radius:var(--r-ctrl);padding:.72rem 1rem;cursor:pointer;border:1.5px solid var(--ink);background:transparent;color:var(--ink);transition:transform .12s var(--ease)}
+.pbtn:hover{transform:translateY(-1px)}
+.pbtn.hot{background:var(--accent);border-color:var(--accent);color:#241A05}
+.pbtn[disabled]{opacity:.55;cursor:wait}
+.pnote{margin-top:10px;font-size:.82rem;color:var(--muted);text-align:center;font-style:italic}
+.note{margin:14px auto 0;max-width:640px;text-align:center;font-size:.85rem;color:var(--accent-deep);font-weight:700;min-height:1.2em}
+.banner{margin:18px auto 0;max-width:680px;background:#EAF3EC;border:1.5px solid #BFD8C5;color:#245934;border-radius:12px;padding:14px 18px;font-size:.9rem;font-weight:700;text-align:center}
+.banner.err{background:#F7ECE9;border-color:#E3BFB6;color:#8C2F1F}
+
+/* ---- info strip ---- */
+.strip{margin:clamp(1.6rem,4vw,2.6rem) 0;background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r-card);padding:20px 22px}
+.strip h2{font-family:var(--serif);font-size:1.15rem;margin:0 0 10px}
+.strip .rows{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.strip .row{font-size:.85rem;color:var(--ink-2)}
+.strip .row b{display:block;color:var(--ink);font-size:.9rem;margin-bottom:2px}
+
+/* ---- footer ---- */
+footer{margin-top:clamp(2.6rem,6vw,4rem);border-top:1px solid var(--line);background:var(--surface)}
+.foot{max-width:1120px;margin:0 auto;padding:26px clamp(14px,3vw,28px) 34px}
+.foot .top{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.foot .tagline{max-width:420px;font-size:.82rem;color:var(--muted);margin:10px 0 0}
+.foot .links{display:flex;flex-direction:column;gap:6px;font-size:.82rem}
+.foot .links a{text-decoration:none;color:var(--ink-2)}
+.foot .links a:hover{color:var(--accent-deep)}
+.foot .base{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-size:.74rem;color:var(--muted)}
+
+/* ---- auth modal（与工具页同款） ---- */
+.auth-overlay{position:fixed;inset:0;background:rgba(27,23,16,.45);display:flex;align-items:center;justify-content:center;z-index:60;opacity:0;pointer-events:none;transition:opacity .22s ease}
+.auth-overlay.open{opacity:1;pointer-events:auto}
+.auth-card{position:relative;width:min(400px,92vw);background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 30px 80px -30px rgba(27,23,16,.5)}
+.auth-card h2{font-family:var(--serif);font-size:1.35rem;font-weight:800;margin:0 0 .3rem}
+.auth-card p.asub{margin:0 0 14px;font-size:.8rem;color:var(--muted);line-height:1.5}
+.auth-tabs{display:flex;gap:6px;margin-bottom:14px}
+.auth-tabs button{flex:1;font:inherit;font-size:.78rem;font-weight:700;padding:.5rem;border-radius:9px;border:1.5px solid var(--line);background:#fff;color:var(--muted);cursor:pointer}
+.auth-tabs button.on{background:var(--ink);border-color:var(--ink);color:#F6F2E8}
+.auth-close{position:absolute;top:14px;right:16px;border:none;background:none;font-size:1rem;color:var(--muted);cursor:pointer}
+.field{margin-bottom:10px}
+.field label{display:block;font-size:.72rem;font-weight:700;color:var(--ink-2);margin-bottom:4px}
+.field input{width:100%;font:inherit;font-size:.85rem;padding:.55rem .65rem;border:1.5px solid var(--line);border-radius:9px;background:#fff}
+.field input:focus{outline:none;border-color:var(--accent)}
+.field .row{display:flex;gap:8px}
+.field .row input{flex:1}
+.field .row button{font:inherit;font-size:.75rem;font-weight:700;white-space:nowrap;border:1.5px solid var(--line-2);background:#fff;border-radius:9px;padding:0 .7rem;cursor:pointer}
+.field .row button:hover{border-color:var(--accent)}
+.auth-msg{font-size:.75rem;min-height:1.1em;margin:2px 0 10px;color:#A33B2E}
+.auth-msg.ok{color:#2F7D4F}
+.btn-dark{width:100%;font:inherit;font-size:.85rem;font-weight:800;border:none;border-radius:9px;background:var(--ink);color:#F6F2E8;padding:.66rem;cursor:pointer}
+.btn-dark:hover{background:#2A241A}
+.gbox{margin-top:12px}
+.orline{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:.72rem;margin:12px 0 10px}
+.orline::before,.orline::after{content:"";flex:1;height:1px;background:var(--line)}
+#gslot{display:flex;justify-content:center}
+
+@media (max-width:900px){
+  .plans{grid-template-columns:1fr;max-width:520px;margin:0 auto}
+  .strip .rows{grid-template-columns:1fr}
+  .nav-links .nav-link{font-size:.72rem;padding:.36rem .45rem}
+}
+@media (max-width:520px){
+  .nav-links a:not(.nav-link-active):nth-child(1),.nav-links a:not(.nav-link-active):nth-child(2){display:none}
+}
+</style>
+<script src="https://accounts.google.com/gsi/client?hl=es" async defer></script>
+</head>
+<body>
+
+<nav class="nav" aria-label="Principal">
+  <div class="nav-in">
+    <a class="brand" href="../"><svg class="bmark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 2.5c0 0-5.6 7.6-5.6 11.7a5.6 5.6 0 0 0 11.2 0C21.6 10.1 16 2.5 16 2.5Z" fill="#C98A26"/><path d="M4.5 28c3.9-2.2 7.6-3.3 11.5-3.3s7.6 1.1 11.5 3.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg><span class="btxt">Tinta <em>Piel</em></span></a>
+    <div class="nav-links">
+      <a href="../tatuaje-de-leon-en-la-pierna-para-mujer/" class="nav-link">León</a>
+      <a href="../tatuaje-de-leona-en-la-pierna/" class="nav-link">Leona</a>
+      <a href="../tatuajes-de-leones-en-la-pierna/" class="nav-link">Leones</a>
+      <a href="../tools/probador/" class="nav-link">Probador virtual</a>
+      <a href="./" class="nav-link nav-link-active">Planes</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <section class="hero">
+    <span class="kicker">Créditos y planes</span>
+    <h1>Prueba tu tatuaje antes de hacerte el tatuaje</h1>
+    <p>El probador es gratis mientras tengas créditos: sube tu diseño, míralo sobre una foto real y genera el efecto sobre piel con IA. Cuando se te acaben, elige un plan aquí abajo.</p>
+    <div class="authbar" id="authBar"></div>
+  </section>
+
+  <section class="plans" id="plans" aria-label="Planes y precios"></section>
+  <p class="note" id="note"></p>
+  <div class="banner" id="banner" hidden></div>
+
+  <section class="strip">
+    <h2>Cómo funcionan los créditos</h2>
+    <div class="rows">
+      <div class="row"><b>5 créditos por prueba con IA</b>El efecto real tarda 1–3 minutos por generación. Cada prueba descuenta 5 créditos — antes de gastar nada te avisamos.</div>
+      <div class="row"><b>Regalo de bienvenida</b>Al crear tu cuenta recibes 5 créditos gratis (1 prueba) para que pruebes el flujo completo.</div>
+      <div class="row"><b>Sin letra pequeña</b>El plan mensual se renueva solo y lo cancelas cuando quieras. La prueba semanal es un pago único y el pase anual dura 365 días.</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="foot">
+    <div class="top">
+      <div>
+        <a class="brand" href="../"><svg class="bmark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 2.5c0 0-5.6 7.6-5.6 11.7a5.6 5.6 0 0 0 11.2 0C21.6 10.1 16 2.5 16 2.5Z" fill="#C98A26"/><path d="M4.5 28c3.9-2.2 7.6-3.3 11.5-3.3s7.6 1.1 11.5 3.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg><span class="btxt">Tinta <em>Piel</em></span></a>
+        <p class="tagline">Prueba tatuajes con IA sobre fotos reales antes de sentarte en la silla del tatuador.</p>
+      </div>
+      <div class="links">
+        <a href="../tools/probador/">Probador de tatuajes virtual</a>
+        <a href="../tatuaje-de-leon-en-la-pierna-para-mujer/">Tatuaje de león en la pierna para mujer</a>
+        <a href="../tatuaje-de-leona-en-la-pierna/">Tatuaje de leona en la pierna</a>
+        <a href="../tatuajes-de-leones-en-la-pierna/">Tatuajes de leones en la pierna</a>
+      </div>
+    </div>
+    <div class="base">© Tinta Piel · Tu cuenta, tus créditos y tus resultados se guardan en tu perfil.</div>
+  </div>
+</footer>
+
+<!-- 登录 / 注册弹窗（与工具页同款） -->
+<div class="auth-overlay" id="authOverlay">
+  <div class="auth-card">
+    <button class="auth-close" id="authClose" aria-label="Cerrar">✕</button>
+    <h2 id="authTitle">Inicia sesión</h2>
+    <p class="asub">Necesitas una cuenta para comprar créditos con tarjeta.</p>
+    <div class="auth-tabs">
+      <button id="tabLogin" class="on">Iniciar sesión</button>
+      <button id="tabReg">Crear cuenta</button>
+    </div>
+    <div class="field"><label>Email</label><input type="email" id="fEmail" placeholder="tu@email.com" autocomplete="email"></div>
+    <div class="field" id="codeField" hidden>
+      <label>Código de verificación</label>
+      <div class="row"><input type="text" id="fCode" placeholder="123456" maxlength="6"><button id="bCode" type="button">Enviar código</button></div>
+    </div>
+    <div class="field"><label>Contraseña</label><input type="password" id="fPass" placeholder="Mínimo 6 caracteres" autocomplete="current-password"></div>
+    <p class="auth-msg" id="authMsg"></p>
+    <div class="auth-actions"><button class="btn-dark" id="bAuthSubmit">Entrar</button></div>
+    <div class="gbox" id="gBox" hidden>
+      <div class="orline"><span>o</span></div>
+      <div id="gslot"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var API = (location.protocol === 'file:' || location.port === '8770' || location.port === '8000')
+    ? 'http://127.0.0.1:8010/api/v1'
+    : '/api/v1';
+
+  function ls(k, v){ try { if (v === undefined) return localStorage.getItem(k) || ''; if (v === '') localStorage.removeItem(k); else localStorage.setItem(k, v); } catch(e){ return ''; } }
+  function getToken(){ return ls('tt:token'); }
+  function getEmail(){ return ls('tt:email'); }
+  function api(path, opts){
+    opts = opts || {};
+    var h = opts.headers || {};
+    if (getToken()) h['Authorization'] = 'Bearer ' + getToken();
+    if (opts.body && typeof opts.body !== 'string'){ h['Content-Type'] = 'application/json'; opts.body = JSON.stringify(opts.body); }
+    opts.headers = h;
+    return fetch(API + path, opts).then(function(r){ return r.json(); });
+  }
+
+  var noteEl = document.getElementById('note');
+  var bannerEl = document.getElementById('banner');
+  function setNote(t){ noteEl.textContent = t || ''; }
+  function showBanner(t, err){ bannerEl.hidden = false; bannerEl.textContent = t; bannerEl.className = 'banner' + (err ? ' err' : ''); }
+
+  // ===== 登录态栏 =====
+  var authBar = document.getElementById('authBar');
+  function renderAuthBar(){
+    authBar.innerHTML = '';
+    if (getToken()){
+      var who = document.createElement('span'); who.className = 'who'; who.textContent = getEmail();
+      var crd = document.createElement('span'); crd.className = 'crd'; crd.id = 'barCrd'; crd.textContent = 'Créditos: …';
+      var rec = document.createElement('a'); rec.className = 'rec'; rec.href = '../tools/probador/'; rec.textContent = 'Ir al probador';
+      var out = document.createElement('button'); out.type = 'button'; out.textContent = 'Salir';
+      out.addEventListener('click', function(){ ls('tt:token', ''); renderAuthBar(); });
+      authBar.appendChild(who); authBar.appendChild(crd); authBar.appendChild(rec); authBar.appendChild(out);
+      loadQuota();
+    } else {
+      var note = document.createElement('span'); note.className = 'who'; note.textContent = '¿Ya tienes cuenta?';
+      var bt = document.createElement('button'); bt.type = 'button'; bt.textContent = 'Inicia sesión';
+      bt.addEventListener('click', function(){ openAuth('login'); });
+      authBar.appendChild(note); authBar.appendChild(bt);
+    }
+  }
+  function loadQuota(){
+    api('/site/tryon/quota').then(function(j){
+      var el = document.getElementById('barCrd');
+      if (!el) return;
+      if (j && j.code === '00000' && j.data){ el.textContent = 'Créditos: ' + (j.data.creditsBalance || 0); }
+      else { el.textContent = 'Créditos: ?'; }
+    }).catch(function(){});
+  }
+
+  // ===== 登录 / 注册弹窗 =====
+  var authOverlay = document.getElementById('authOverlay');
+  var authMsg = document.getElementById('authMsg');
+  var tabLogin = document.getElementById('tabLogin'), tabReg = document.getElementById('tabReg');
+  var codeField = document.getElementById('codeField');
+  var bAuthSubmit = document.getElementById('bAuthSubmit');
+  var authMode = 'login';
+  function setAuthMsg(t, ok){ authMsg.textContent = t || ''; authMsg.classList.toggle('ok', !!ok); }
+  function applyAuthMode(){
+    var isLogin = authMode === 'login';
+    tabLogin.classList.toggle('on', isLogin);
+    tabReg.classList.toggle('on', !isLogin);
+    codeField.hidden = isLogin;
+    bAuthSubmit.textContent = isLogin ? 'Entrar' : 'Crear cuenta';
+    document.getElementById('authTitle').textContent = isLogin ? 'Inicia sesión' : 'Crea tu cuenta';
+    scheduleGSI();
+  }
+  function afterAuth(tok, email){
+    ls('tt:token', tok); ls('tt:email', email || '');
+    closeAuth(); renderAuthBar();
+    var p = pendingAfterLogin; pendingAfterLogin = null;
+    if (p && p.type === 'checkout'){ buy(p.planKey, p.idx); }
+    else if (p && p.type === 'verify'){ runVerify(p.creem); }
+  }
+
+  // ===== Google 一键登录（GIS，与 PixPurge 共用同一 OAuth client）=====
+  var GOOGLE_CLIENT_ID = '547189163396-lgqbc3ucvpejdeg9lndjcn8u9tbge8e8.apps.googleusercontent.com';
+  var gsiInited = false;
+  function gsiRender(){
+    if (!window.google || !google.accounts || !google.accounts.id) return false;
+    if (!gsiInited){
+      try { google.accounts.id.initialize({ client_id: GOOGLE_CLIENT_ID, callback: onGoogleCred }); gsiInited = true; }
+      catch (e) { return false; }
+    }
+    var slot = document.getElementById('gslot');
+    if (slot){
+      slot.innerHTML = '';
+      try {
+        google.accounts.id.renderButton(slot, { theme: 'outline', size: 'large', shape: 'pill', width: 300, text: authMode === 'login' ? 'signin_with' : 'signup_with' });
+        document.getElementById('gBox').hidden = false;
+      } catch (e) { /* GIS 渲染失败时保留邮箱登录方式 */ }
+    }
+    return true;
+  }
+  function scheduleGSI(){
+    var delays = [0, 500, 1500, 3000];
+    for (var i = 0; i < delays.length; i++){
+      (function(d){ setTimeout(gsiRender, d); })(delays[i]);
+    }
+  }
+  function onGoogleCred(resp){
+    if (!resp || !resp.credential) return;
+    setAuthMsg('Conectando con Google…', true);
+    api('/auth/google/login', { method: 'POST', body: { idToken: resp.credential } }).then(function(j){
+      var d = (j && j.data) || {};
+      var tok = d.accessToken || d.token || '';
+      if (j && j.code === '00000' && tok){
+        var ge = (d.user && d.user.email) || '';
+        afterAuth(tok, ge);
+      } else {
+        setAuthMsg((j && j.msg) || 'No se pudo iniciar sesión con Google.');
+      }
+    }).catch(function(){ setAuthMsg('Error de conexión con el servidor.'); });
+  }
+
+  function openAuth(mode){ authMode = mode || 'login'; applyAuthMode(); setAuthMsg(''); authOverlay.classList.add('open'); }
+  function closeAuth(){ authOverlay.classList.remove('open'); }
+  tabLogin.addEventListener('click', function(){ authMode = 'login'; setAuthMsg(''); applyAuthMode(); });
+  tabReg.addEventListener('click', function(){ authMode = 'register'; setAuthMsg(''); applyAuthMode(); });
+  document.getElementById('authClose').addEventListener('click', closeAuth);
+  authOverlay.addEventListener('click', function(e){ if (e.target === authOverlay) closeAuth(); });
+  document.getElementById('bCode').addEventListener('click', function(){
+    var email = document.getElementById('fEmail').value.trim();
+    if (!email){ setAuthMsg('Escribe tu email primero.'); return; }
+    var b = this; b.disabled = true; setAuthMsg('Enviando…', true);
+    api('/auth/email/code', { method:'POST', body: { email: email } }).then(function(j){
+      if (j && j.code === '00000'){ setAuthMsg('Código enviado. Revisa tu correo.', true); }
+      else { setAuthMsg((j && j.msg) || 'No se pudo enviar el código.'); }
+    }).catch(function(){ setAuthMsg('Error de conexión.'); }).then(function(){ b.disabled = false; });
+  });
+  var pendingAfterLogin = null; // {type:'checkout', planKey, idx} | {type:'verify'}
+  bAuthSubmit.addEventListener('click', function(){
+    var email = document.getElementById('fEmail').value.trim();
+    var pass = document.getElementById('fPass').value;
+    if (!email || !pass){ setAuthMsg('Email y contraseña son obligatorios.'); return; }
+    bAuthSubmit.disabled = true;
+    var req;
+    if (authMode === 'login'){
+      req = api('/auth/email/login', { method:'POST', body: { email: email, password: pass } });
+    } else {
+      var code = document.getElementById('fCode').value.trim();
+      if (!code){ setAuthMsg('Falta el código de verificación.'); bAuthSubmit.disabled = false; return; }
+      req = api('/auth/register', { method:'POST', body: { email: email, emailCode: code, password: pass } });
+    }
+    req.then(function(j){
+      var d = (j && j.data) || {};
+      var tok = d.accessToken || d.token || '';
+      if (j && j.code === '00000' && tok){
+        afterAuth(tok, email);
+      } else {
+        setAuthMsg((j && j.msg) || 'No se pudo completar. Revisa tus datos.');
+      }
+    }).catch(function(){ setAuthMsg('Error de conexión con el servidor.'); })
+      .then(function(){ bAuthSubmit.disabled = false; });
+  });
+
+  // ===== 计划渲染 =====
+  function esc(s){ return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function renderPlans(plans){
+    var box = document.getElementById('plans');
+    box.innerHTML = '';
+    for (var i = 0; i < plans.length; i++){
+      (function(p){
+        var pkg = (p.packages || [])[0] || {};
+        var card = document.createElement('div');
+        card.className = 'card' + (p.badgeText === 'Popular' ? ' hot' : '');
+        var badgeCls = 'pbadge' + (p.badgeText === 'Popular' ? '' : ' ghost');
+        var html = '';
+        if (p.badgeText) html += '<span class="' + badgeCls + '">' + esc(p.badgeText) + '</span>';
+        html += '<h2 class="ptitle">' + esc(p.title) + '</h2>';
+        if (p.subtitle) html += '<div class="psub">' + esc(p.subtitle) + '</div>';
+        html += '<div class="pprice"><span class="num">' + esc(pkg.price || '') + '</span><span class="unit">' + esc(pkg.unit || '') + '</span>';
+        if (pkg.originalPrice) html += '<span class="orig">' + esc(pkg.originalPrice) + '</span>';
+        if (pkg.discountPct) html += '<span class="off">' + esc(pkg.discountPct) + '</span>';
+        html += '</div>';
+        if (pkg.credits) html += '<div class="pcredits">' + esc(pkg.credits) + '</div>';
+        if (pkg.meta) html += '<div class="pmeta">' + esc(pkg.meta) + '</div>';
+        if (pkg.perCredit) html += '<div class="pper">' + esc(pkg.perCredit) + '</div>';
+        html += '<ul class="pfeats">';
+        var feats = p.features || [];
+        for (var f = 0; f < feats.length; f++) html += '<li>' + esc(feats[f]) + '</li>';
+        html += '</ul>';
+        if (p.subNote) html += '<p class="pnote">' + esc(p.subNote) + '</p>';
+        html += '<button type="button" class="pbtn' + (p.badgeText === 'Popular' ? ' hot' : '') + '">' + esc(p.ctaText || 'Comprar') + '</button>';
+        card.innerHTML = html;
+        var btn = card.querySelector('.pbtn');
+        btn.addEventListener('click', function(){ buy(p.planKey, 0); });
+        box.appendChild(card);
+      })(plans[i]);
+    }
+  }
+  fetch(API + '/site/pricing').then(function(r){ return r.json(); }).then(function(j){
+    if (j && j.code === '00000' && j.data && j.data.length){ renderPlans(j.data); }
+    else { setNote('No pudimos cargar los planes. Recarga la página en un momento.'); }
+  }).catch(function(){ setNote('No pudimos cargar los planes. Revisa tu conexión.'); });
+
+  // ===== 购买 =====
+  function buy(planKey, idx){
+    if (!getToken()){ pendingAfterLogin = { type: 'checkout', planKey: planKey, idx: idx }; openAuth('login'); return; }
+    var btns = document.querySelectorAll('.pbtn'); for (var b = 0; b < btns.length; b++) btns[b].disabled = true;
+    setNote('Abriendo la pasarela de pago segura…');
+    api('/site/payment/checkout', { method:'POST', body: { planKey: planKey, packageIdx: idx } }).then(function(j){
+      if (j && j.code === '00000' && j.data && j.data.url){ location.href = j.data.url; }
+      else {
+        setNote('');
+        for (var b2 = 0; b2 < btns.length; b2++) btns[b2].disabled = false;
+        showBanner((j && j.msg) || 'No se pudo iniciar el pago. Inténtalo de nuevo.', true);
+      }
+    }).catch(function(){
+      setNote('');
+      for (var b3 = 0; b3 < btns.length; b3++) btns[b3].disabled = false;
+      showBanner('No se pudo conectar con el servidor de pagos.', true);
+    });
+  }
+
+  // ===== 支付回跳确认（Creem 追加参数按原序收集，仅 Creem 键） =====
+  var CREEM_KEYS = ['checkout_id', 'order_id', 'customer_id', 'subscription_id', 'product_id', 'request_id', 'signature'];
+  function collectCreemParams(){
+    var raw = location.search.replace(/^\?/, '');
+    if (!raw) return [];
+    var parts = raw.split('&');
+    var out = [];
+    for (var i = 0; i < parts.length; i++){
+      var kv = parts[i].split('=');
+      var k = decodeURIComponent(kv[0] || '');
+      var v = decodeURIComponent((kv[1] || '').replace(/\+/g, ' '));
+      if (CREEM_KEYS.indexOf(k) >= 0) out.push([k, v]);
+    }
+    return out;
+  }
+  function runVerify(creem){
+    if (!getToken()){ pendingAfterLogin = { type: 'verify', creem: creem }; openAuth('login'); setAuthMsg('Inicia sesión para confirmar tu pago y recibir los créditos.', true); return; }
+    setNote('Confirmando tu pago…');
+    api('/site/payment/verify-session', { method:'POST', body: { creemParams: creem } }).then(function(j){
+      setNote('');
+      if (j && j.code === '00000' && j.data && j.data.paid){
+        showBanner('¡Pago confirmado! ' + (j.data.credits ? '+' + j.data.credits + ' créditos añadidos a tu cuenta.' : 'Tus créditos ya están en tu cuenta.'));
+        renderAuthBar();
+      } else if (j && j.data && j.data.paid === false) {
+        showBanner((j.data && j.data.message) || 'El pago aún no está completado. Si acabas de pagar, espera un momento y recarga.', true);
+      } else {
+        showBanner((j && j.msg) || 'No pudimos confirmar el pago. Si el cargo se hizo, escríbenos.', true);
+      }
+      try { history.replaceState(null, '', location.pathname); } catch(e){}
+    }).catch(function(){
+      setNote('');
+      showBanner('No pudimos confirmar el pago (conexión). Recarga la página para reintentar.', true);
+    });
+  }
+  (function(){
+    if (!/(^|[?&])paid=success/.test(location.search)) return;
+    var creem = collectCreemParams();
+    var hasCheckout = false;
+    for (var i = 0; i < creem.length; i++) if (creem[i][0] === 'checkout_id') hasCheckout = true;
+    if (!hasCheckout) return; // 无 Creem 参数：可能是直接访问
+    runVerify(creem);
+  })();
+
+  renderAuthBar();
+})();
+</script>
+    <!-- 访问统计（进入次数/停留时长 → 后台「数据统计-用户统计」；失败不影响页面） -->
+    <script>
+(function() {
+  try {
+    var TRACK_URL = ((location.protocol === 'file:' || location.port === '8770' || location.port === '8000')
+      ? 'http://127.0.0.1:8010/api/v1' : '/api/v1') + '/site/track/visit';
+    var SID_KEY = 'tt:visit:sid';
+    var SEC_KEY = 'tt:visit:sec';
+    var sid = null;
+    var baseSec = 0;
+    try {
+      sid = sessionStorage.getItem(SID_KEY);
+      baseSec = Number(sessionStorage.getItem(SEC_KEY)) || 0;
+    } catch (e) { /* 隐私模式等：降级为内存会话 */ }
+    if (!sid) {
+      sid = 'v-' + Date.now().toString(36) + '-' +
+        Math.random().toString(36).slice(2, 10) + Math.random().toString(36).slice(2, 10);
+      try { sessionStorage.setItem(SID_KEY, sid); } catch (e) {}
+    }
+
+    var t0 = Date.now();
+    var lastSentSec = -1;
+
+    function trackReport(totalSec) {
+      var headers = { 'Content-Type': 'application/json' };
+      try {
+        var token = localStorage.getItem('tt:token');
+        if (token) headers['Authorization'] = 'Bearer ' + token;
+      } catch (e) {}
+      var body = JSON.stringify({
+        sessionId: sid,
+        page: location.pathname,
+        referrer: document.referrer || '',
+        durationSec: Math.max(0, Math.round(totalSec))
+      });
+      try {
+        if (typeof fetch === 'function') {
+          var p = fetch(TRACK_URL, { method: 'POST', headers: headers, body: body, keepalive: true });
+          if (p && p.catch) p.catch(function() {});
+        } else if (navigator.sendBeacon) {
+          navigator.sendBeacon(TRACK_URL, new Blob([body], { type: 'application/json' }));
+        }
+      } catch (e) { /* 统计失败不影响页面 */ }
+    }
+
+    function totalSec() { return baseSec + (Date.now() - t0) / 1000; }
+    function trackFlush(force) {
+      var total = totalSec();
+      if (!force && total - lastSentSec < 30) return;
+      lastSentSec = total;
+      try { sessionStorage.setItem(SEC_KEY, String(Math.round(total))); } catch (e) {}
+      trackReport(total);
+    }
+
+    trackReport(baseSec); /* 进入上报：新会话创建记录 / 同会话跨页续报累计时长 */
+    var trackTimer = setInterval(function() { trackFlush(false); }, 60000);
+    window.addEventListener('pagehide', function() {
+      clearInterval(trackTimer);
+      trackFlush(true);
+    });
+    document.addEventListener('visibilitychange', function() {
+      if (document.visibilityState === 'hidden') trackFlush(true);
+    });
+  } catch (e) { /* 统计初始化失败不影响页面 */ }
+})();
+    </script>
+</body>
+</html>
