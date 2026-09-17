@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Probador de Tatuajes Virtual con IA | Tinta Piel</title>
-<meta name="description" content="Sube una foto de tu pierna, coloca el diseño y mira cómo quedaría tu tatuaje con IA: luz, curvatura y escala reales. Empieza gratis.">
+<title>Simulador de Tatuajes Virtual con IA | Tinta Piel</title>
+<meta name="description" content="Simulador de tatuajes con IA: sube una foto, coloca tu diseño y mira cómo quedaría tu tatuaje en tu piel — proporción, encaje y luz reales. Empieza gratis.">
 <link rel="canonical" href="https://tintapiel.com/tools/probador/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314110D'/%3E%3Cpath d='M16 7c0 0-5.4 7.2-5.4 11.2a5.4 5.4 0 0 0 10.8 0C21.4 14.2 16 7 16 7Z' fill='%23C98A26'/%3E%3Cpath d='M8.5 25.6c2.6-1.7 5.1-2.5 7.5-2.5s4.9.8 7.5 2.5' stroke='%23C98A26' stroke-width='2' stroke-linecap='round' fill='none' opacity='.85'/%3E%3C/svg%3E">
-<meta property="og:title" content="Probador de Tatuajes Virtual con IA | Tinta Piel">
-<meta property="og:description" content="Sube una foto de tu pierna, coloca el diseño y mira cómo quedaría tu tatuaje con IA: luz, curvatura y escala reales. Empieza gratis.">
+<meta property="og:title" content="Simulador de Tatuajes Virtual con IA | Tinta Piel">
+<meta property="og:description" content="Simulador de tatuajes con IA: sube una foto, coloca tu diseño y mira cómo quedaría tu tatuaje en tu piel — proporción, encaje y luz reales. Empieza gratis.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tintapiel.com/tools/probador/">
 <meta property="og:site_name" content="Tinta Piel">
@@ -16,8 +16,8 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Probador de Tatuajes Virtual con IA | Tinta Piel">
-<meta name="twitter:description" content="Sube una foto de tu pierna, coloca el diseño y mira cómo quedaría tu tatuaje con IA: luz, curvatura y escala reales. Empieza gratis.">
+<meta name="twitter:title" content="Simulador de Tatuajes Virtual con IA | Tinta Piel">
+<meta name="twitter:description" content="Simulador de tatuajes con IA: sube una foto, coloca tu diseño y mira cómo quedaría tu tatuaje en tu piel — proporción, encaje y luz reales. Empieza gratis.">
 <meta name="twitter:image" content="https://tintapiel.com/tools/probador/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,15 +29,15 @@
   --serif:'Playfair Display',Georgia,serif;--ease:cubic-bezier(.22,.61,.36,1);
 }
 *{box-sizing:border-box}
-html,body{height:100%}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:'Plus Jakarta Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow:hidden;display:flex;flex-direction:column}
+html{height:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Plus Jakarta Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;display:flex;flex-direction:column;min-height:100vh}
 .filewarn{background:#FFF4E0;border-bottom:1px solid #E8D5A8;color:#7A5B15;font-size:.78rem;padding:.6rem 22px;line-height:1.5}
 .filewarn[hidden]{display:none}
 .filewarn .fw-btn{display:inline-block;margin-left:6px;padding:.32rem .8rem;border-radius:999px;background:var(--accent);color:#fff;font-weight:700;font-size:.72rem;text-decoration:none;vertical-align:middle;white-space:nowrap}
 .filewarn .fw-btn:hover{background:var(--accent-deep)}
 
 /* ===== 布局骨架：左舞台（满屏）+ 右工作栏 ===== */
-.app{display:flex;flex:1;min-height:0}
+.app{display:flex;flex:none;min-height:0;height:100vh}
 .stage{position:relative;flex:1;min-width:0;display:flex;align-items:center;justify-content:center;overflow:hidden;
   background:radial-gradient(120% 90% at 50% 38%, #F3EFE5 0%, #EAE5D8 58%, #E1DBCB 100%)}
 .stage canvas{display:block;border-radius:2px;touch-action:none;cursor:grab;
@@ -198,15 +198,26 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:17px;heigh
 /* ===== 移动端 ===== */
 @media (max-width:820px){
   body{overflow:auto}
-  .app{flex-direction:column}
+  .app{flex-direction:column;height:auto}
   .stage{height:62vh;flex:none}
   .zoomctl{right:10px}
   .panel{width:100%;flex:none;border-left:none;border-top:1px solid var(--line)}
   .panel-scroll{overflow:visible}
 }
+
+/* ===== Contenido informativo (SEO / FAQ) ===== */
+.info{background:var(--surface);border-top:1px solid var(--line)}
+.info .i-wrap{max-width:880px;margin:0 auto;padding:58px 22px 76px}
+.info .i-lede{font-size:1.05rem;line-height:1.75;color:var(--ink);margin:0 0 8px}
+.info h2{font-family:var(--serif);font-weight:700;font-size:1.55rem;line-height:1.28;margin:46px 0 14px;letter-spacing:-.01em}
+.info h3{font-size:1rem;font-weight:700;margin:24px 0 8px;color:var(--ink)}
+.info p{font-size:.97rem;line-height:1.8;color:var(--ink-2);margin:0 0 14px}
+.info a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.info a:hover{color:var(--accent)}
+@media (max-width:820px){.info .i-wrap{padding:40px 16px 56px}.info h2{font-size:1.3rem}.info p{font-size:.95rem}}
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "SoftwareApplication", "name": "Probador de Tatuajes Virtual", "applicationCategory": "DesignApplication", "operatingSystem": "Web", "url": "https://tintapiel.com/tools/probador/", "inLanguage": "es", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "Tinta Piel"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Tatuaje de León en la Pierna para Mujer", "item": "https://tintapiel.com/tatuaje-de-leon-en-la-pierna-para-mujer/"}, {"@type": "ListItem", "position": 2, "name": "Probador de Tatuajes Virtual", "item": "https://tintapiel.com/tools/probador/"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "SoftwareApplication", "name": "Simulador de Tatuajes Virtual con IA", "applicationCategory": "DesignApplication", "operatingSystem": "Web", "url": "https://tintapiel.com/tools/probador/", "inLanguage": "es", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "Tinta Piel"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Tatuaje de León en la Pierna para Mujer", "item": "https://tintapiel.com/tatuaje-de-leon-en-la-pierna-para-mujer/"}, {"@type": "ListItem", "position": 2, "name": "Simulador de Tatuajes Virtual con IA", "item": "https://tintapiel.com/tools/probador/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Es gratis el simulador de tatuajes?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Puedes subir tu foto, colocar el diseño y componer la vista previa sin pagar nada y sin crear cuenta. Y el efecto realista con IA va incluido en tu primera prueba: la cuenta se crea gratis; después, cada generación con IA se paga con créditos."}}, {"@type": "Question", "name": "¿Necesito registrarme para probar un diseño?", "acceptedAnswer": {"@type": "Answer", "text": "No para probar: la vista previa — subir la foto, elegir el diseño y moverlo — funciona sin cuenta. Para el efecto realista con IA sí necesitas una cuenta gratuita: se crea con tu email en menos de un minuto y la primera prueba va incluida."}}, {"@type": "Question", "name": "¿Qué pasa con mi foto después de probarla?", "acceptedAnswer": {"@type": "Answer", "text": "Se usa solo para generar tu prueba. Al pedir el efecto con IA, la imagen se envía a nuestro servidor y se procesa con nuestro proveedor de IA; el resultado queda en tu cuenta y no se publica en ninguna parte. No la usamos para entrenar modelos ni con otros fines, y puedes pedir su eliminación escribiendo a support@tintapiel.com."}}, {"@type": "Question", "name": "¿Puedo probar el diseño en otra zona del cuerpo?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Dentro de una misma foto puedes mover el diseño a cualquier zona; para verlo en otra parte del cuerpo, sube otra foto o cambia de modelo en el panel. Pierna, muslo, pantorrilla, brazo o espalda: pruébalo donde lo estés pensando."}}, {"@type": "Question", "name": "¿El resultado se parece a cómo quedará el tatuaje real?", "acceptedAnswer": {"@type": "Answer", "text": "Es una simulación: te muestra proporción, tamaño y encaje sobre tu piel, con luz y curvatura reales — más que suficiente para decidir. El acabado final depende del trazo del tatuador, de tu piel y de cómo cure el tatuaje; úsalo como una referencia seria, no como una garantía fotográfica."}}, {"@type": "Question", "name": "¿Funciona desde el móvil?", "acceptedAnswer": {"@type": "Answer", "text": "Sí: funciona desde el navegador del móvil, sin instalar ninguna app. Solo necesitas una foto y conexión; subes, colocas y ajustas con el dedo, igual que en la computadora."}}, {"@type": "Question", "name": "¿Puedo descargar o compartir el resultado?", "acceptedAnswer": {"@type": "Answer", "text": "Sí: la composición se descarga con el botón Exportar y el resultado con IA tiene su propio botón de descarga, en PNG y sin marca de agua. Un botón para compartir en redes todavía no existe: descarga la imagen y súbela donde quieras. Y si quieres más generaciones con IA, mira Planes y créditos."}}, {"@type": "Question", "name": "¿Cuánto tarda el proceso?", "acceptedAnswer": {"@type": "Answer", "text": "El montaje en pantalla es instantáneo. El efecto con IA tarda entre 1 y 5 minutos, según el tamaño de la foto y la carga del servicio; el resultado aparece en la página cuando está listo. Si algo falla, puedes reintentar sin perder la composición."}}]}]}
 </script>
 <script src="https://accounts.google.com/gsi/client?hl=es" async defer></script>
 </head>
@@ -219,7 +230,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:17px;heigh
 
 <div class="app">
   <main class="stage" id="stage">
-    <a class="brandchip" href="../../tatuaje-de-leon-en-la-pierna-para-mujer/"><span>Tinta <em>Piel</em></span><span class="b-tag">probador</span></a>
+    <a class="brandchip" href="../../tatuaje-de-leon-en-la-pierna-para-mujer/"><span>Tinta <em>Piel</em></span><span class="b-tag">simulador</span></a>
     <canvas id="cv" width="1200" height="1500"></canvas>
     <div class="hintpill" id="hintPill">Arrastra el diseño para moverlo · Arrastra el fondo para mover la vista</div>
     <button class="uploadcta" id="uploadCta" type="button">
@@ -236,7 +247,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:17px;heigh
     <div class="panel-scroll">
       <header class="p-head">
         <div>
-          <h1>Probador de Tatuajes Virtual con IA</h1>
+          <h1>Simulador de Tatuajes Virtual con IA</h1>
           <p class="p-sub">Multi-capa · Efecto real con IA</p>
         </div>
         <button class="btn btn-dark btn-export" id="bExport" type="button">Exportar</button>
@@ -251,36 +262,36 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:17px;heigh
           <button type="button" data-g="m">Hombre</button>
         </div>
         <div class="modelgrid" id="gridF">
-          <button class="mtile" sel sel type="button" data-src="assets/model-f-01.jpg" title="Modelo 1"><img src="assets/model-f-01-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-f-11.jpg" title="Modelo 11"><img src="assets/model-f-11-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-f-13.jpg" title="Modelo 13"><img src="assets/model-f-13-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-f-12.jpg" title="Modelo 12"><img src="assets/model-f-12-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-f-16.jpg" title="Modelo 16"><img src="assets/model-f-16-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-f-02.jpg" title="Modelo 2"><img src="assets/model-f-02-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-f-06.jpg" title="Modelo 6"><img src="assets/model-f-06-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-f-05.jpg" title="Modelo 5"><img src="assets/model-f-05-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-f-15.jpg" title="Modelo 15"><img src="assets/model-f-15-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-f-14.jpg" title="Modelo 14"><img src="assets/model-f-14-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-f-04.jpg" title="Modelo 4"><img src="assets/model-f-04-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-f-03.jpg" title="Modelo 3"><img src="assets/model-f-03-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-f-07.jpg" title="Modelo 7"><img src="assets/model-f-07-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-f-08.jpg" title="Modelo 8"><img src="assets/model-f-08-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-f-09.jpg" title="Modelo 9"><img src="assets/model-f-09-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-f-10.jpg" title="Modelo 10"><img src="assets/model-f-10-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
+          <button class="mtile" sel sel type="button" data-src="assets/model-f-01.jpg" title="Modelo 1"><img width="200" height="267" src="assets/model-f-01-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-f-11.jpg" title="Modelo 11"><img width="200" height="267" src="assets/model-f-11-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-f-13.jpg" title="Modelo 13"><img width="200" height="267" src="assets/model-f-13-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-f-12.jpg" title="Modelo 12"><img width="200" height="267" src="assets/model-f-12-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-f-16.jpg" title="Modelo 16"><img width="200" height="267" src="assets/model-f-16-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-f-02.jpg" title="Modelo 2"><img width="200" height="267" src="assets/model-f-02-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-f-06.jpg" title="Modelo 6"><img width="200" height="267" src="assets/model-f-06-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-f-05.jpg" title="Modelo 5"><img width="200" height="267" src="assets/model-f-05-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-f-15.jpg" title="Modelo 15"><img width="200" height="267" src="assets/model-f-15-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-f-14.jpg" title="Modelo 14"><img width="200" height="267" src="assets/model-f-14-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-f-04.jpg" title="Modelo 4"><img width="200" height="267" src="assets/model-f-04-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-f-03.jpg" title="Modelo 3"><img width="200" height="267" src="assets/model-f-03-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-f-07.jpg" title="Modelo 7"><img width="200" height="267" src="assets/model-f-07-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-f-08.jpg" title="Modelo 8"><img width="200" height="267" src="assets/model-f-08-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-f-09.jpg" title="Modelo 9"><img width="200" height="267" src="assets/model-f-09-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-f-10.jpg" title="Modelo 10"><img width="200" height="267" src="assets/model-f-10-thumb.jpg" alt="Modelo femenino"><span class="chk">✓</span></button>
         </div>
         <div class="modelgrid" id="gridM" hidden>
-          <button class="mtile" type="button" data-src="assets/model-m-01.jpg" title="Modelo 1"><img src="assets/model-m-01-thumb.jpg" alt="Modelo masculino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-m-12.jpg" title="Modelo 12"><img src="assets/model-m-12-thumb.jpg" alt="Modelo masculino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-m-06.jpg" title="Modelo 6"><img src="assets/model-m-06-thumb.jpg" alt="Modelo masculino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-m-07.jpg" title="Modelo 7"><img src="assets/model-m-07-thumb.jpg" alt="Modelo masculino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-m-02.jpg" title="Modelo 2"><img src="assets/model-m-02-thumb.jpg" alt="Modelo masculino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-m-03.jpg" title="Modelo 3"><img src="assets/model-m-03-thumb.jpg" alt="Modelo masculino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-m-09.jpg" title="Modelo 9"><img src="assets/model-m-09-thumb.jpg" alt="Modelo masculino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-m-08.jpg" title="Modelo 8"><img src="assets/model-m-08-thumb.jpg" alt="Modelo masculino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-m-04.jpg" title="Modelo 4"><img src="assets/model-m-04-thumb.jpg" alt="Modelo masculino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-m-05.jpg" title="Modelo 5"><img src="assets/model-m-05-thumb.jpg" alt="Modelo masculino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-m-10.jpg" title="Modelo 10"><img src="assets/model-m-10-thumb.jpg" alt="Modelo masculino"><span class="chk">✓</span></button>
-          <button class="mtile" type="button" data-src="assets/model-m-11.jpg" title="Modelo 11"><img src="assets/model-m-11-thumb.jpg" alt="Modelo masculino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-m-01.jpg" title="Modelo 1"><img width="200" height="267" src="assets/model-m-01-thumb.jpg" alt="Modelo masculino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-m-12.jpg" title="Modelo 12"><img width="200" height="267" src="assets/model-m-12-thumb.jpg" alt="Modelo masculino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-m-06.jpg" title="Modelo 6"><img width="200" height="267" src="assets/model-m-06-thumb.jpg" alt="Modelo masculino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-m-07.jpg" title="Modelo 7"><img width="200" height="267" src="assets/model-m-07-thumb.jpg" alt="Modelo masculino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-m-02.jpg" title="Modelo 2"><img width="200" height="267" src="assets/model-m-02-thumb.jpg" alt="Modelo masculino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-m-03.jpg" title="Modelo 3"><img width="200" height="267" src="assets/model-m-03-thumb.jpg" alt="Modelo masculino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-m-09.jpg" title="Modelo 9"><img width="200" height="267" src="assets/model-m-09-thumb.jpg" alt="Modelo masculino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-m-08.jpg" title="Modelo 8"><img width="200" height="267" src="assets/model-m-08-thumb.jpg" alt="Modelo masculino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-m-04.jpg" title="Modelo 4"><img width="200" height="267" src="assets/model-m-04-thumb.jpg" alt="Modelo masculino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-m-05.jpg" title="Modelo 5"><img width="200" height="267" src="assets/model-m-05-thumb.jpg" alt="Modelo masculino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-m-10.jpg" title="Modelo 10"><img width="200" height="267" src="assets/model-m-10-thumb.jpg" alt="Modelo masculino"><span class="chk">✓</span></button>
+          <button class="mtile" type="button" data-src="assets/model-m-11.jpg" title="Modelo 11"><img width="200" height="267" src="assets/model-m-11-thumb.jpg" alt="Modelo masculino"><span class="chk">✓</span></button>
         </div>
         <label class="photoup" for="photoUp">+ Sube tu propia foto</label>
         <input type="file" id="photoUp" accept="image/*" hidden>
@@ -296,10 +307,10 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:17px;heigh
         <div class="designs" id="myDesignGrid" hidden></div>
         <div class="sec-sub">Diseños populares</div>
         <div class="designs" id="designGrid">
-          <button class="dtile" type="button" data-src="assets/tattoo-01-nobg.png" data-name="León realista" title="León realista"><img src="assets/tattoo-01-nobg.png" alt="León realista"></button>
-          <button class="dtile" type="button" data-src="assets/tattoo-02-nobg.png" data-name="León ornamental" title="León ornamental"><img src="assets/tattoo-02-nobg.png" alt="León ornamental"></button>
-          <button class="dtile" type="button" data-src="assets/tattoo-03-nobg.png" data-name="León fine line" title="León fine line"><img src="assets/tattoo-03-nobg.png" alt="León fine line"></button>
-          <button class="dtile" type="button" data-src="assets/tattoo-04-nobg.png" data-name="Leones geométricos" title="Leones geométricos"><img src="assets/tattoo-04-nobg.png" alt="Leones geométricos"></button>
+          <button class="dtile" type="button" data-src="assets/tattoo-01-nobg.webp" data-name="León realista" title="León realista"><img src="assets/tattoo-01-thumb.webp" width="200" height="200" alt="León realista"></button>
+          <button class="dtile" type="button" data-src="assets/tattoo-02-nobg.webp" data-name="León ornamental" title="León ornamental"><img src="assets/tattoo-02-thumb.webp" width="200" height="200" alt="León ornamental"></button>
+          <button class="dtile" type="button" data-src="assets/tattoo-03-nobg.webp" data-name="León fine line" title="León fine line"><img src="assets/tattoo-03-thumb.webp" width="200" height="200" alt="León fine line"></button>
+          <button class="dtile" type="button" data-src="assets/tattoo-04-nobg.webp" data-name="Leones geométricos" title="Leones geométricos"><img src="assets/tattoo-04-thumb.webp" width="200" height="200" alt="Leones geométricos"></button>
         </div>
       </section>
 
@@ -331,6 +342,63 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:17px;heigh
     </div>
   </aside>
 </div>
+
+
+<section class="info" id="info">
+  <div class="i-wrap">
+    <p class="i-lede">El simulador de tatuajes de Tinta Piel responde la pregunta que todos se hacen antes de la aguja: cómo va a quedar. Sube una foto, coloca tu diseño sobre la piel y ajústalo hasta que se lea como lo imaginas — y cuando lo tengas claro, pídele a la IA el acabado realista: luz, curvatura y textura de piel incluidas. La composición en pantalla es libre; la primera pasada con IA va incluida al crear tu cuenta. Todo desde el navegador, también en el celular.</p>
+
+    <h2>Qué es un simulador de tatuajes virtual</h2>
+    <p>Un simulador de tatuajes virtual pone un diseño sobre una foto de tu propio cuerpo para que veas el resultado antes de la aguja. En algunos sitios lo llaman probador de tatuajes; es exactamente lo mismo. No es una galería de tatuajes ajenos: es una prueba con tu piel, tu tamaño y tu zona.</p>
+    <p>Eso cambia las decisiones. El mismo león se lee distinto en el muslo, en la pantorrilla o en la espalda; un retrato pequeño puede emborronarse con los años; y un diseño que parece enorme en pantalla puede quedar corto sobre la pierna. Con el simulador compruebas proporción, encaje y ubicación en segundos, y llegas al estudio con una idea clara en lugar de una corazonada.</p>
+    <p>También funciona en el otro sentido: si ya tienes el diseño elegido, lo pruebas antes de comprometer un tamaño que después no tenga arreglo.</p>
+
+    <h2>Cómo probar un tatuaje en tu foto, paso a paso</h2>
+    <p>Solo hacen falta tres cosas: una foto, un diseño y un par de minutos.</p>
+    <h3>1. Sube una foto donde se vea la zona</h3>
+    <p>Lo ideal: una foto con luz natural, de frente y sin filtros. Si no tienes una a mano, usa una de las fotos de ejemplo del panel — hay modelos de hombre y mujer en distintas zonas del cuerpo.</p>
+    <h3>2. Elige el diseño y colócalo</h3>
+    <p>Puedes partir de la galería de la web o subir tu propio archivo (PNG o JPG). El diseño se añade como una capa: arrástralo, gíralo, escálalo y ajusta su transparencia hasta que encaje.</p>
+    <h3>3. Pide el efecto real con IA</h3>
+    <p>Cuando la composición esté lista, pulsa el botón del efecto IA. El sistema interpreta tu foto y funde la tinta con la piel: respeta la luz, la curvatura y la textura de la imagen. Tarda entre 1 y 5 minutos y el resultado se descarga desde la misma página.</p>
+    <p>El montaje en pantalla es instantáneo y no necesita cuenta; el efecto con IA requiere una cuenta gratuita, con la primera prueba incluida.</p>
+
+    <h2>Pierna, muslo y otras zonas: dónde encaja tu diseño</h2>
+    <p>La pierna y el muslo son las zonas donde los diseños grandes se leen mejor: hay espacio para la composición completa y se cubren con ropa cuando hace falta. La pantorrilla pide piezas verticales; el muslo, formatos anchos; el tobillo y la espinilla funcionan con detalles pequeños.</p>
+    <p>En el simulador no hay zonas prohibidas: mueve el diseño por cualquier parte de la foto y, si quieres verlo en otro punto del cuerpo, sube una foto nueva o cambia de modelo en el panel. Si buscas referencias reales de cómo caen en la pierna, empieza por nuestra guía <a href="../../tatuaje-de-leon-en-la-pierna-para-mujer/">Tatuaje de León en la Pierna para Mujer</a>: galería, estilos y todo lo que conviene decidir antes.</p>
+
+    <h2>Estilos y tamaños: qué cambia en la piel</h2>
+    <p>El estilo decide el tamaño mínimo. Un retrato realista necesita centímetros — por debajo de 15 cm los rasgos finos empiezan a emborronarse con los años —; una línea fina vive en espacios pequeños, aunque aguanta peor el paso del tiempo en zonas que se estiran o se exponen al sol. El blackwork juega con el contraste y se mantiene legible a distancia, y el ornamental depende de la simetría y del trazo limpio.</p>
+    <p>Antes de decidir, pruébalo: cambia el tamaño en el simulador y mira cómo respira el diseño sobre tu piel. Lo que no se lee bien en pantalla difícilmente se leerá mejor tatuado.</p>
+
+    <h2>Tu foto y tu privacidad en el simulador de tatuajes</h2>
+    <p>Tu foto se usa solo para generar tu prueba. Cuando pides el efecto con IA, la imagen se envía a nuestro servidor y se procesa con nuestro proveedor de IA únicamente para devolverte el resultado: no se publica, no se muestra a otras personas y no se usa para entrenar modelos. El resultado queda guardado en tu cuenta y puedes pedir su eliminación cuando quieras escribiendo a support@tintapiel.com. La composición que haces en pantalla sin usar la IA no sale de tu navegador.</p>
+    <p>Sabemos lo que significa una foto de tu cuerpo: si tienes dudas antes de subirla, escríbenos y te respondemos.</p>
+
+    <h2>Preguntas frecuentes sobre el simulador de tatuajes</h2>
+    <div class="faq">
+    <h3>¿Es gratis el simulador de tatuajes?</h3>
+    <p>Sí. Puedes subir tu foto, colocar el diseño y componer la vista previa sin pagar nada y sin crear cuenta. Y el efecto realista con IA va incluido en tu primera prueba: la cuenta se crea gratis; después, cada generación con IA se paga con créditos.</p>
+    <h3>¿Necesito registrarme para probar un diseño?</h3>
+    <p>No para probar: la vista previa — subir la foto, elegir el diseño y moverlo — funciona sin cuenta. Para el efecto realista con IA sí necesitas una cuenta gratuita: se crea con tu email en menos de un minuto y la primera prueba va incluida.</p>
+    <h3>¿Qué pasa con mi foto después de probarla?</h3>
+    <p>Se usa solo para generar tu prueba. Al pedir el efecto con IA, la imagen se envía a nuestro servidor y se procesa con nuestro proveedor de IA; el resultado queda en tu cuenta y no se publica en ninguna parte. No la usamos para entrenar modelos ni con otros fines, y puedes pedir su eliminación escribiendo a support@tintapiel.com.</p>
+    <h3>¿Puedo probar el diseño en otra zona del cuerpo?</h3>
+    <p>Sí. Dentro de una misma foto puedes mover el diseño a cualquier zona; para verlo en otra parte del cuerpo, sube otra foto o cambia de modelo en el panel. Pierna, muslo, pantorrilla, brazo o espalda: pruébalo donde lo estés pensando.</p>
+    <h3>¿El resultado se parece a cómo quedará el tatuaje real?</h3>
+    <p>Es una simulación: te muestra proporción, tamaño y encaje sobre tu piel, con luz y curvatura reales — más que suficiente para decidir. El acabado final depende del trazo del tatuador, de tu piel y de cómo cure el tatuaje; úsalo como una referencia seria, no como una garantía fotográfica.</p>
+    <h3>¿Funciona desde el móvil?</h3>
+    <p>Sí: funciona desde el navegador del móvil, sin instalar ninguna app. Solo necesitas una foto y conexión; subes, colocas y ajustas con el dedo, igual que en la computadora.</p>
+    <h3>¿Puedo descargar o compartir el resultado?</h3>
+    <p>Sí: la composición se descarga con el botón Exportar y el resultado con IA tiene su propio botón de descarga, en PNG y sin marca de agua. Un botón para compartir en redes todavía no existe: descarga la imagen y súbela donde quieras. Y si quieres más generaciones con IA, mira <a href="../../pricing/">Planes y créditos</a>.</p>
+    <h3>¿Cuánto tarda el proceso?</h3>
+    <p>El montaje en pantalla es instantáneo. El efecto con IA tarda entre 1 y 5 minutos, según el tamaño de la foto y la carga del servicio; el resultado aparece en la página cuando está listo. Si algo falla, puedes reintentar sin perder la composición.</p>
+    </div>
+
+    <h2>Sigue explorando</h2>
+    <p>Si tu idea va de una leona con su cría, la guía <a href="../../tatuaje-de-leona-en-la-pierna/">Tatuaje de Leona en la Pierna</a> reúne los diseños y el significado. Y si buscas una escena completa — pareja, familia o manada —, en <a href="../../tatuajes-de-leones-en-la-pierna/">Tatuajes de Leones en la Pierna</a> tienes las composiciones y cómo repartirlas por la zona. Con la referencia clara y la prueba sobre piel, la cita con tu tatuador rinde mucho más.</p>
+  </div>
+</section>
 
 <!-- 登录 / 注册弹窗 -->
 <div class="auth-overlay" id="authOverlay">
