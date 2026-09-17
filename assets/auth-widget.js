@@ -128,7 +128,7 @@
     if (slot) {
       slot.innerHTML = '';
       try {
-        google.accounts.id.renderButton(slot, { theme: 'outline', size: 'large', shape: 'pill', width: 300, locale: 'es', text: authMode === 'login' ? 'signin_with' : 'signup_with' });
+        google.accounts.id.renderButton(slot, { theme: 'outline', size: 'large', shape: 'pill', width: 199 /* <200：禁用 Google 个性化按钮（官方条件），勿调大 */, locale: 'es', text: authMode === 'login' ? 'signin_with' : 'signup_with' });
         d.getElementById('gBox').hidden = false;
       } catch (e) { /* GIS 渲染失败时保留邮箱登录方式 */ }
     }
