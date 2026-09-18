@@ -449,6 +449,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:17px;heigh
       <a href="../../tatuaje-de-leon-en-la-pierna-para-mujer/">Tatuaje de León en la Pierna para Mujer</a>
       <a href="../../tatuaje-de-leona-en-la-pierna/">Tatuaje de Leona en la Pierna</a>
       <a href="../../tatuajes-de-leones-en-la-pierna/">Tatuajes de Leones en la Pierna</a>
+      <a href="../../guias/">Guías de Tatuajes de León y Leona</a>
     </div>
     <div class="p-foot p-legal">
       <a href="../../privacidad/">Privacidad</a>
@@ -1209,7 +1210,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:17px;heigh
     draw(false);
     bAI.disabled = true;
     setStatus('Generando efecto real… suele tardar 1–3 minutos. No cierres esta pestaña.');
-    api('/site/tryon', { method: 'POST', body: { image: dataUrl, origName: 'tinta-piel-probador.png' } })
+    api('/site/tryon', { method: 'POST', body: { image: dataUrl, origName: 'tinta-piel-simulador.png' } })
       .then(function(j){
         if (j && j.code === '00000' && j.data && j.data.image){
           resultImg.src = j.data.image;

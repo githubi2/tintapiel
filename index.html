@@ -65,6 +65,13 @@ footer{border-top:1px solid var(--line);background:var(--surface)}
 .foot{max-width:1060px;margin:0 auto;padding:22px clamp(14px,3vw,26px) 30px;font-size:.78rem;color:var(--muted)}
 .foot a{color:var(--ink-2);text-decoration:none;margin-right:14px}
 @media (max-width:860px){.grid{grid-template-columns:1fr}.band{grid-template-columns:1fr}.btns{justify-content:flex-start}}
+.gtitle{text-align:center;font-family:var(--serif);font-size:clamp(1.5rem,3.4vw,2rem);font-weight:800;margin:1.8rem 0 0;padding:0 16px}
+.prose{max-width:780px;margin:0 auto;padding:.6rem clamp(14px,3vw,26px) 0}
+.prose h2{font-family:var(--serif);font-size:clamp(1.4rem,3vw,1.85rem);font-weight:800;line-height:1.2;margin:2.3rem 0 .7rem}
+.prose h3{font-size:1rem;font-weight:800;margin:1.5rem 0 .4rem}
+.prose p{color:var(--ink-2);font-size:.95rem;line-height:1.85;margin:0 0 .9rem}
+.prose a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:860px){.prose{padding:0 16px}}
 </style>
 <script type="application/ld+json">
 {
@@ -96,6 +103,51 @@ footer{border-top:1px solid var(--line);background:var(--surface)}
       },
       "datePublished": "2026-09-18",
       "dateModified": "2026-09-18"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es Tinta Piel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un sitio editorial y de herramientas para decidir tatuajes: tres guías a fondo sobre leones y leonas en la pierna, diseños originales en cada una y un simulador con IA para verte el diseño sobre tu piel antes de la cita."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Los diseños de la galería son originales?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Cada pieza se crea para el sitio y se filtra a mano antes de publicarse; si no cumple el nivel, no aparece. Por eso cada guía lleva dieciséis diseños y no cuatrocientos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta usar el simulador?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Empezar es gratis: el lienzo no pide cuenta y al registrarte recibes una primera prueba con IA de regalo. Después, cada generación con IA consume créditos y puedes recargarlos cuando quieras; los tienes explicados en Planes y créditos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo usar los diseños de la galería con mi tatuador?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Están pensados para eso: para que llegues a tu cita con una referencia clara. Son material original del sitio, de uso personal, y tu tatuador puede adaptarlos —tamaño, detalles, mezclas— para que funcionen en tu piel."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿De dónde salen los datos de las guías?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "De la práctica del oficio y de lo que dicen los propios tatuadores: precios en rangos reales por ciudad, tiempos de curación estándar y dolor por zona. Cuando algo es opinión, lo decimos; cuando es un rango, lo dejamos claro."
+          }
+        }
+      ]
     }
   ]
 }
@@ -106,6 +158,7 @@ footer{border-top:1px solid var(--line);background:var(--surface)}
   <div class="nav-in">
     <a class="brand" href="./"><svg class="bmark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 2.5c0 0-5.6 7.6-5.6 11.7a5.6 5.6 0 0 0 11.2 0C21.6 10.1 16 2.5 16 2.5Z" fill="#C98A26"/><path d="M4.5 28c3.9-2.2 7.6-3.3 11.5-3.3s7.6 1.1 11.5 3.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg><span class="btxt">Tinta <em>Piel</em></span></a>
     <div class="nav-links">
+      <a href="guias/">Guías</a>
       <a href="tatuaje-de-leon-en-la-pierna-para-mujer/">León</a>
       <a href="tatuaje-de-leona-en-la-pierna/">Leona</a>
       <a href="tatuajes-de-leones-en-la-pierna/">Leones</a>
@@ -118,9 +171,10 @@ footer{border-top:1px solid var(--line);background:var(--surface)}
 <main class="wrap">
   <section class="hero">
     <span class="kicker">Guías + simulador con IA</span>
-    <h1>Tu tatuaje de león, decidido con calma</h1>
-    <p>Tres guías honestas —significado, estilos que envejecen bien, dolor y precio— y un simulador virtual para ver tu diseño sobre piel real antes de sentarte en la silla.</p>
+    <h1>Tatuajes de León y Leona: Guías y Simulador</h1>
+    <p>Tu tatuaje de león, decidido con calma: tres guías honestas —significado, estilos que envejecen bien, dolor y precio— y un simulador con IA para verte el diseño sobre piel real antes de la cita.</p>
   </section>
+  <h2 class="gtitle">Tres guías de tatuajes de león y leona</h2>
   <section class="grid">
     <a class="gcard" href="tatuaje-de-leon-en-la-pierna-para-mujer/">
       <span class="gimg"><img src="tatuaje-de-leon-en-la-pierna-para-mujer/images/01-leon-muslo-realismo.webp" alt="Tatuaje de León en la Pierna para Mujer" loading="lazy"></span>
@@ -135,6 +189,39 @@ footer{border-top:1px solid var(--line);background:var(--surface)}
       <span class="gtxt"><b>Tatuajes de Leones en la Pierna</b><i>Familia, manada y pareja: composiciones que no se ven cargadas.</i><em>Seguir leyendo →</em></span>
     </a>
   </section>
+  <section class="prose">
+    <h2>Cómo elegir tatuajes de león y leona que envejezcan bien</h2>
+    <p>Elegir un tatuaje es elegir cómo te va a mirar esa pieza dentro de diez años. Con los leones pasa algo particular: el mismo animal cambia por completo según el estilo. Un retrato realista en blanco y negro aguanta décadas si tiene centímetros suficientes —por debajo de 15 cm, los detalles finos empiezan a emborronarse—; una línea fina vive mejor en formatos pequeños, aunque pide más retoques con el tiempo; y el blackwork juega con el contraste para mantenerse legible a distancia.</p>
+    <p>Después viene la zona. La pierna y el muslo son los territorios clásicos de estas piezas —espacio para composiciones grandes, y discretas cuando hace falta cubrirlas—; la pantorrilla pide diseños verticales; el tobillo y la espinilla funcionan con detalles pequeños. Si dudas entre estilos, mira cómo se lee cada uno a la distancia real: un realista pide cercanía para apreciarse, un blackwork se reconoce desde lejos y la línea fina es un susurro que envejece con carácter. Si es tu primer tatuaje, empieza por el tamaño: pruébalo en el simulador, míralo a escala sobre tu propia foto y decide con los ojos, no con la imaginación.</p>
+    <p>Y una regla de oro que repetimos en las tres guías: antes del sí definitivo, pide en el estudio el stencil de prueba. Es gratis, tarda minutos y evita sorpresas. Y el mejor aliado es un tatuador honesto: mejor un diseño simplificado bien ejecutado que un retrato imposible.</p>
+
+    <h2>Por dónde empezar con tus tatuajes de león y leona</h2>
+    <p>Cada guía está pensada para una intención distinta. Si buscas un león para una mujer —significado, estilos que funcionan bien y una galería de dieciséis diseños originales—, empieza por <a href="tatuaje-de-leon-en-la-pierna-para-mujer/">Tatuaje de León en la Pierna para Mujer</a>. Si lo que te ronda es una leona con su cría, la madre que protege, ese hilo tiene su propia guía: <a href="tatuaje-de-leona-en-la-pierna/">Tatuaje de Leona en la Pierna</a>, con los cachorros y los huecos de dolor explicados. Y si tu idea es una escena completa —pareja de leones, familia, manada—, <a href="tatuajes-de-leones-en-la-pierna/">Tatuajes de Leones en la Pierna</a> reúne las composiciones y cómo repartirlas por la zona sin que se vean cargadas.</p>
+    <p>Las tres siguen la misma estructura: significado, estilos, dolor, precio real, curación y cómo decidir sin arrepentirte. Puedes leerlas en orden o ir directo a la tuya. Cada una incluye su galería de dieciséis diseños para que veas el estilo antes de leer la teoría: la decisión se toma mirando. Y si prefieres el mapa completo en una sola página, lo tienes en el <a href="guias/">índice de todas las guías</a>.</p>
+
+    <h2>Cuánto duele y cuánto cuesta: respuestas honestas</h2>
+    <p>Dos preguntas frenan a casi todo el mundo antes de tatuarse: ¿cuánto duele y cuánto cuesta? Las respuestas honestas: duele menos de lo que dice el mito, y más en unas zonas que en otras. En la pierna —muslo y pantorrilla— el dolor va de moderado a bajo para la mayoría de la gente; en la espinilla y cerca del tobillo sube. Si es tu primer tatuaje, el muslo es un buen punto de partida.</p>
+    <p>El precio depende de tres cosas: tamaño, detalle y ciudad. Un diseño pequeño de línea fina arranca en rangos accesibles; una pieza grande de realismo en blanco y negro sube por las horas de silla que pide. En cada guía desglosamos rangos reales por estilo y te contamos qué preguntar en el estudio: si el precio es por sesión o por pieza, si incluye retoques y cuántas sesiones calculan para tu idea.</p>
+    <p>Lo que ninguna guía puede hacer por ti es decidir. Eso es tuyo. Nosotros dejamos los números y los tiempos claros para que la decisión no se aplace por miedo a preguntar. Un consejo que repetimos en cada guía: no negocies el precio bajando la calidad —ajusta tamaño o detalle— y pide un presupuesto cerrado antes de sentarte en la silla.</p>
+
+    <h2>Del deseo a tu piel: el simulador</h2>
+    <p>Las guías te dicen qué funciona; el simulador te dice cómo te queda a ti. El flujo tiene tres pasos: subes una foto donde se vea la zona, colocas el diseño —de la galería o uno tuyo— y ajustas tamaño, ángulo y luz. Cuando lo tengas, pides el efecto real con IA y ves la tinta fundida con tu piel, con la curvatura y la textura de tu foto.</p>
+    <p>Es gratis empezar: el lienzo no pide cuenta y la primera prueba con IA va de regalo. Tu foto se usa solo para generar tu prueba: no se publica y no entra en ninguna galería. Y funciona igual desde el móvil que desde la computadora. El simulador no promete una garantía fotográfica: te da proporción, encaje y lectura real, porque el resultado final depende del trazo del tatuador y de cómo cure tu piel. Con eso, llegas a la cita sabiendo exactamente lo que quieres.</p>
+    <p><a href="tools/simulador/">Probar el simulador de tatuajes →</a></p>
+
+    <h2>Preguntas frecuentes</h2>
+    <h3>¿Qué es Tinta Piel?</h3>
+    <p>Un sitio editorial y de herramientas para decidir tatuajes: tres guías a fondo sobre leones y leonas en la pierna, diseños originales en cada una y un simulador con IA para verte el diseño sobre tu piel antes de la cita.</p>
+    <h3>¿Los diseños de la galería son originales?</h3>
+    <p>Sí. Cada pieza se crea para el sitio y se filtra a mano antes de publicarse; si no cumple el nivel, no aparece. Por eso cada guía lleva dieciséis diseños y no cuatrocientos.</p>
+    <h3>¿Cuánto cuesta usar el simulador?</h3>
+    <p>Empezar es gratis: el lienzo no pide cuenta y al registrarte recibes una primera prueba con IA de regalo. Después, cada generación con IA consume créditos y puedes recargarlos cuando quieras; los tienes explicados en <a href="precios/">Planes y créditos</a>.</p>
+    <h3>¿Puedo usar los diseños de la galería con mi tatuador?</h3>
+    <p>Están pensados para eso: para que llegues a tu cita con una referencia clara. Son material original del sitio, de uso personal, y tu tatuador puede adaptarlos —tamaño, detalles, mezclas— para que funcionen en tu piel.</p>
+    <h3>¿De dónde salen los datos de las guías?</h3>
+    <p>De la práctica del oficio y de lo que dicen los propios tatuadores: precios en rangos reales por ciudad, tiempos de curación estándar y dolor por zona. Cuando algo es opinión, lo decimos; cuando es un rango, lo dejamos claro.</p>
+  </section>
+
   <section class="band">
     <div>
       <h2>Pruébalo en tu piel antes de tatuártelo</h2>
@@ -151,6 +238,7 @@ footer{border-top:1px solid var(--line);background:var(--surface)}
     <a href="tatuaje-de-leon-en-la-pierna-para-mujer/">Tatuaje de León en la Pierna para Mujer</a>
     <a href="tatuaje-de-leona-en-la-pierna/">Tatuaje de Leona en la Pierna</a>
     <a href="tatuajes-de-leones-en-la-pierna/">Tatuajes de Leones en la Pierna</a>
+        <a href="guias/">Guías de Tatuajes de León y Leona</a>
     <a href="tools/simulador/">Simulador de tatuajes virtual</a>
     <a href="precios/">Planes y créditos</a>
         <a href="privacidad/">Privacidad</a>

@@ -145,6 +145,12 @@ footer{margin-top:clamp(2.6rem,6vw,4rem);border-top:1px solid var(--line);backgr
 @media (max-width:520px){
   .nav-links a:not(.nav-link-active):nth-child(1),.nav-links a:not(.nav-link-active):nth-child(2){display:none}
 }
+.prose{max-width:820px;margin:0 auto;padding:.4rem clamp(14px,3vw,28px) 0}
+.prose h2{font-family:var(--serif);font-size:clamp(1.25rem,2.6vw,1.55rem);font-weight:800;line-height:1.25;margin:2rem 0 .6rem}
+.prose h3{font-size:.98rem;font-weight:800;margin:1.4rem 0 .4rem}
+.prose p{color:var(--ink-2);font-size:.93rem;line-height:1.8;margin:0 0 .85rem}
+.prose a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:3px}
+.fine{margin:12px 0 0;font-size:.78rem;color:var(--muted)}
 </style>
 <script src="https://accounts.google.com/gsi/client?hl=es" async defer></script>
 </head>
@@ -154,6 +160,7 @@ footer{margin-top:clamp(2.6rem,6vw,4rem);border-top:1px solid var(--line);backgr
   <div class="nav-in">
     <a class="brand" href="../"><svg class="bmark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 2.5c0 0-5.6 7.6-5.6 11.7a5.6 5.6 0 0 0 11.2 0C21.6 10.1 16 2.5 16 2.5Z" fill="#C98A26"/><path d="M4.5 28c3.9-2.2 7.6-3.3 11.5-3.3s7.6 1.1 11.5 3.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg><span class="btxt">Tinta <em>Piel</em></span></a>
     <div class="nav-links">
+      <a href="../guias/" class="nav-link">Guías</a>
       <a href="../tatuaje-de-leon-en-la-pierna-para-mujer/" class="nav-link">León</a>
       <a href="../tatuaje-de-leona-en-la-pierna/" class="nav-link">Leona</a>
       <a href="../tatuajes-de-leones-en-la-pierna/" class="nav-link">Leones</a>
@@ -166,14 +173,24 @@ footer{margin-top:clamp(2.6rem,6vw,4rem);border-top:1px solid var(--line);backgr
 <main class="wrap">
   <section class="hero">
     <span class="kicker">Créditos y planes</span>
-    <h1>Prueba tu tatuaje antes de hacerte el tatuaje</h1>
-    <p>El simulador es gratis mientras tengas créditos: sube tu diseño, míralo sobre una foto real y genera el efecto sobre piel con IA. Cuando se te acaben, elige un plan aquí abajo.</p>
+    <h1>Planes y Créditos: Simulador de Tatuajes con IA</h1>
+    <p>Prueba tu tatuaje antes de hacerte el tatuaje. El simulador es gratis mientras tengas créditos: sube tu diseño, míralo sobre una foto real y genera el efecto sobre piel con IA. Cuando se te acaben, elige un plan aquí abajo.</p>
     <div class="authbar" id="authBar"></div>
   </section>
 
   <section class="plans" id="plans" aria-label="Planes y precios"></section>
   <p class="note" id="note"></p>
   <div class="banner" id="banner" hidden></div>
+
+  <section class="strip" aria-label="Precios">
+    <h2>Precios: los tres planes en una línea</h2>
+    <div class="rows">
+      <div class="row"><b>Semanal — $8 USD</b>Pago único: 500 créditos que se suman a tu saldo permanente. Ideal para probar el flujo completo sin compromiso.</div>
+      <div class="row"><b>Mensual — $20 USD</b>2000 créditos al mes, con renovación automática que cancelas cuando quieras. El más elegido: más créditos por dólar que el semanal.</div>
+      <div class="row"><b>Anual — $199 USD</b>24000 créditos con vigencia de un año: el mejor precio por crédito de los tres, para quien va a usar el simulador a fondo.</div>
+    </div>
+    <p class="fine">Los importes se muestran en dólares y el cobro lo procesa Creem. El precio vigente es siempre el que aparece en esta página antes de pagar.</p>
+  </section>
 
   <section class="strip">
     <h2>Cómo funcionan los créditos</h2>
@@ -182,6 +199,31 @@ footer{margin-top:clamp(2.6rem,6vw,4rem);border-top:1px solid var(--line);backgr
       <div class="row"><b>Regalo de bienvenida</b>Al crear tu cuenta recibes 5 créditos gratis (1 prueba) para que pruebes el flujo completo.</div>
       <div class="row"><b>Sin letra pequeña</b>El plan mensual se renueva solo y lo cancelas cuando quieras. La prueba semanal es un pago único y el pase anual dura 365 días.</div>
     </div>
+  </section>
+
+  <section class="prose">
+    <h2>¿Para quién es cada plan?</h2>
+    <p>El paquete semanal es para una primera vez o un tatuaje concreto: pruebas, ajustas el diseño y decides con 500 créditos que además no caducan. El plan mensual es para quien está iterando: el saldo se repone cada ciclo y lo cancelas cuando quieras. Y el pase anual es para exprimir el simulador todo el año, con el mejor precio por crédito de los tres.</p>
+    <p>Si aún no estás seguro, no hace falta que lo estés: empieza por el regalo de bienvenida —una prueba con IA gratis al crear la cuenta— y elige plan solo cuando lo necesites de verdad. El lienzo, las composiciones manuales y ver tus diseños sobre la foto no consumen créditos.</p>
+
+    <h2>Pagos, seguridad y cancelación</h2>
+    <p>El cobro lo procesa Creem, una pasarela de pago profesional: pagas con tarjeta en su página segura y los datos de tu tarjeta nunca pasan por nuestros servidores. Nosotros solo vemos el estado de tu compra —qué plan, cuándo, con cuántos créditos— y tú recibes tu recibo por correo.</p>
+    <p>El plan mensual se renueva solo y puedes cancelarlo cuando quieras: desde el enlace del recibo o escribiéndonos. Al cancelar dejas de renovar y conservas lo que ya pagaste. Los créditos del paquete semanal se suman a tu saldo permanente; el pase anual mantiene su vigencia de 365 días.</p>
+    <p>Todo lo demás —qué se puede esperar, qué no, y cómo resolvemos los casos raros— está escrito sin rodeos en los <a href="../terminos/">Términos y Condiciones</a>.</p>
+
+    <h2>Preguntas frecuentes</h2>
+    <h3>¿Qué pasa cuando se me acaban los créditos?</h3>
+    <p>El lienzo sigue gratis: puedes subir tu foto, colocar tus diseños y componer sin gastar nada. Los créditos solo se usan cuando pides el efecto real con IA. Cuando estén en cero puedes recargar aquí y seguir donde estabas: tus composiciones no se pierden.</p>
+    <h3>¿Los créditos caducan?</h3>
+    <p>Los del paquete semanal se suman a tu saldo permanente y no caducan. El plan mensual repone tu saldo en cada ciclo mientras permanezca activo. El pase anual mantiene su vigencia de 365 días.</p>
+    <h3>¿Puedo cancelar el plan mensual?</h3>
+    <p>Sí, cuando quieras: desde el portal de pagos del recibo o escribiéndonos. Dejas de renovar y conservas lo ya pagado; no hay penalizaciones ni letra pequeña.</p>
+    <h3>¿Cómo pago y es seguro?</h3>
+    <p>El pago se hace con tarjeta en la pasarela de Creem, que procesa el cobro por nosotros. Los datos de tu tarjeta nunca pasan por nuestros servidores: nosotros solo vemos el estado de tu compra.</p>
+    <h3>¿Hacen reembolsos?</h3>
+    <p>Si algo no salió como esperabas, escríbenos a support@tintapiel.com y lo resolvemos caso por caso; el marco completo está en los Términos. Nada en nuestros procesos limita los derechos que tu ley de consumo te reconozca.</p>
+
+    <p>¿Listo para verlo? Vuelve al <a href="../tools/simulador/">simulador de tatuajes</a> y prueba tu diseño sobre tu foto: el regalo de bienvenida te está esperando.</p>
   </section>
 </main>
 
@@ -197,6 +239,7 @@ footer{margin-top:clamp(2.6rem,6vw,4rem);border-top:1px solid var(--line);backgr
         <a href="../tatuaje-de-leon-en-la-pierna-para-mujer/">Tatuaje de león en la pierna para mujer</a>
         <a href="../tatuaje-de-leona-en-la-pierna/">Tatuaje de leona en la pierna</a>
         <a href="../tatuajes-de-leones-en-la-pierna/">Tatuajes de leones en la pierna</a>
+        <a href="../guias/">Guías de tatuajes de león y leona</a>
         <a href="../privacidad/">Privacidad</a>
         <a href="../terminos/">Términos</a>
         <a href="../cookies/">Cookies</a>
@@ -498,7 +541,115 @@ footer{margin-top:clamp(2.6rem,6vw,4rem);border-top:1px solid var(--line);backgr
   renderAuthBar();
 })();
 </script>
-    <!-- 访问统计（进入次数/停留时长 → 后台「数据统计-用户统计」；失败不影响页面） -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://tintapiel.com/precios/#webpage",
+      "url": "https://tintapiel.com/precios/",
+      "name": "Planes y Créditos: Simulador de Tatuajes con IA | Tinta Piel",
+      "description": "Elige tu plan de créditos para probar tatuajes con efecto real sobre tu foto: semanal, mensual o pase anual. Pago seguro con tarjeta.",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@id": "https://tintapiel.com/#website"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Planes y créditos del simulador de tatuajes"
+      },
+      "breadcrumb": {
+        "@id": "https://tintapiel.com/precios/#breadcrumb"
+      },
+      "datePublished": "2026-09-18",
+      "dateModified": "2026-09-18"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://tintapiel.com/precios/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://tintapiel.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Planes y Créditos",
+          "item": "https://tintapiel.com/precios/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://tintapiel.com/#organization",
+      "name": "Tinta Piel",
+      "url": "https://tintapiel.com/",
+      "description": "Guías y herramientas para elegir tu tatuaje antes de tatuarte."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://tintapiel.com/#website",
+      "url": "https://tintapiel.com/",
+      "name": "Tinta Piel",
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://tintapiel.com/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa cuando se me acaban los créditos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El lienzo sigue gratis: puedes subir tu foto, colocar tus diseños y componer sin gastar nada. Los créditos solo se usan cuando pides el efecto real con IA. Cuando estén en cero puedes recargar aquí y seguir donde estabas: tus composiciones no se pierden."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Los créditos caducan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los del paquete semanal se suman a tu saldo permanente y no caducan. El plan mensual repone tu saldo en cada ciclo mientras permanezca activo. El pase anual mantiene su vigencia de 365 días."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo cancelar el plan mensual?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, cuando quieras: desde el portal de pagos del recibo o escribiéndonos. Dejas de renovar y conservas lo ya pagado; no hay penalizaciones ni letra pequeña."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo pago y es seguro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El pago se hace con tarjeta en la pasarela de Creem, que procesa el cobro por nosotros. Los datos de tu tarjeta nunca pasan por nuestros servidores: nosotros solo vemos el estado de tu compra."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hacen reembolsos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Si algo no salió como esperabas, escríbenos a support@tintapiel.com y lo resolvemos caso por caso; el marco completo está en los Términos. Nada en nuestros procesos limita los derechos que tu ley de consumo te reconozca."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- 访问统计（进入次数/停留时长 → 后台「数据统计-用户统计」；失败不影响页面） -->
     <script>
 (function() {
   try {

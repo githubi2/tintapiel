@@ -79,6 +79,11 @@
       "source": "/sobre-nosotros",
       "destination": "/sobre-nosotros/",
       "permanent": true
+    },
+    {
+      "source": "/guias",
+      "destination": "/guias/",
+      "permanent": true
     }
   ],
   "rewrites": [
