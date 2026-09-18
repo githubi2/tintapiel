@@ -16,6 +16,16 @@
       "permanent": true
     },
     {
+      "source": "/tools/probador/",
+      "destination": "/tools/simulador/",
+      "permanent": true
+    },
+    {
+      "source": "/pricing/",
+      "destination": "/precios/",
+      "permanent": true
+    },
+    {
       "source": "/tools/probador",
       "destination": "/tools/simulador/",
       "permanent": true
