@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidad | Tinta Piel</title>
+<meta name="description" content="Qué datos guarda Tinta Piel, para qué se usan, con quién se comparten y cómo pedir su eliminación. Tu foto y tu cuenta, explicadas en claro.">
+<link rel="canonical" href="https://tintapiel.com/privacidad/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tinta Piel">
+<meta property="og:title" content="Política de Privacidad | Tinta Piel">
+<meta property="og:description" content="Qué datos guarda Tinta Piel, para qué se usan, con quién se comparten y cómo pedir su eliminación. Tu foto y tu cuenta, explicadas en claro.">
+<meta property="og:url" content="https://tintapiel.com/privacidad/">
+<meta property="og:image" content="https://tintapiel.com/privacidad/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Política de Privacidad | Tinta Piel">
+<meta name="twitter:description" content="Qué datos guarda Tinta Piel, para qué se usan, con quién se comparten y cómo pedir su eliminación. Tu foto y tu cuenta, explicadas en claro.">
+<meta name="twitter:image" content="https://tintapiel.com/privacidad/og-image.png">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314110D'/%3E%3Cpath d='M16 7c0 0-5.4 7.2-5.4 11.2a5.4 5.4 0 0 0 10.8 0C21.4 14.2 16 7 16 7Z' fill='%23C98A26'/%3E%3Cpath d='M8.5 25.6c2.6-1.7 5.1-2.5 7.5-2.5s4.9.8 7.5 2.5' stroke='%23C98A26' stroke-width='2' stroke-linecap='round' fill='none' opacity='.85'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* Tinta Piel — tattoo editorial redesign (tatspark-inspired light product register + ink bands) */
+
+:root{
+  --paper:#F6F3EB;
+  --paper-2:#EFEBDF;
+  --surface:#FCFBF7;
+  --ink:#1B1710;
+  --ink-2:#4E483C;
+  --muted:#8B8372;
+  --line:#E2DCCB;
+  --line-2:#CFC8B2;
+  --accent:#C98A26;
+  --accent-deep:#9E6C16;
+  --accent-soft:#F2E7CE;
+  --dark:#16120B;
+  --dark-2:#211B10;
+  --dark-3:#332B19;
+  --cream:#F3EEE2;
+  --cream-dim:#C5BCA4;
+  --serif:"Playfair Display",Georgia,"Times New Roman",serif;
+  --sans:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --r-card:14px;
+  --r-ctrl:9px;
+  --shadow-1:0 1px 2px rgba(27,23,16,.05),0 14px 34px -16px rgba(27,23,16,.13);
+  --shadow-2:0 2px 5px rgba(27,23,16,.05),0 24px 54px -24px rgba(27,23,16,.18);
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html,body{overflow-x:clip}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:var(--sans);font-size:1rem;line-height:1.65;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+::selection{background:var(--accent);color:#fff}
+.wrap{max-width:72rem;margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem)}
+section[id]{scroll-margin-top:88px}
+
+/* ── Buttons / pills ─────────────────────────────────── */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  font-family:var(--sans);font-weight:700;font-size:.95rem;
+  text-decoration:none;white-space:nowrap;cursor:pointer;
+  border-radius:999px;padding:.8rem 1.55rem;border:1px solid transparent;
+  transition:background .2s var(--ease),color .2s var(--ease),border-color .2s var(--ease),transform .2s var(--ease),box-shadow .2s var(--ease);
+}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.btn-dark{background:var(--ink);color:#F6F2E8;border-color:var(--ink);box-shadow:0 10px 24px -12px rgba(27,23,16,.5)}
+.btn-dark:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-2)}
+.btn-ghost:hover{border-color:var(--ink);background:var(--surface);transform:translateY(-2px)}
+.btn-light{background:#F6F2E8;color:var(--ink)}
+.btn-light:hover{background:#fff;transform:translateY(-2px)}
+.btn-lg{padding:1rem 2rem;font-size:1rem}
+.btn .arr{transition:transform .2s var(--ease)}
+.btn:hover .arr{transform:translateY(2px)}
+
+.pill{
+  display:inline-flex;align-items:center;gap:.55rem;
+  background:transparent;border:1px solid var(--line-2);
+  border-radius:999px;padding:.4rem .95rem;
+  font-family:var(--mono);font-size:.7rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--ink-2);
+}
+.pill .spark{color:var(--accent);font-size:.72rem;line-height:1}
+.pill .dot{width:.4rem;height:.4rem;border-radius:50%;background:var(--accent)}
+
+/* ── Nav ─────────────────────────────────────────────── */
+.nav{
+  position:sticky;top:0;z-index:60;
+  background:rgba(246,243,235,.88);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav-in{
+  max-width:72rem;margin:0 auto;padding:.8rem clamp(1.25rem,4vw,2.5rem);
+  display:flex;align-items:center;gap:1.5rem;
+}
+.brand{
+  display:flex;align-items:baseline;gap:.6rem;text-decoration:none;
+  font-family:var(--serif);font-weight:800;font-size:1.35rem;letter-spacing:-.01em;color:var(--ink);
+}
+.brand .bmark{width:29px;height:29px;flex:0 0 auto}
+.brand em{font-style:italic;font-weight:600}
+.brand .bsub{
+  font-family:var(--mono);font-size:.58rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--muted);
+}
+.nav-links{display:flex;gap:1.2rem;margin-left:auto;min-width:0}
+.nav-login{font-size:.83rem;font-weight:700;color:var(--ink-2);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;padding-bottom:.1rem}
+.nav-login:hover{color:var(--ink);border-bottom-color:var(--accent)}
+.nav-links a{
+  text-decoration:none;font-size:.88rem;font-weight:600;color:var(--ink-2);
+  padding:.3rem 0;border-bottom:2px solid transparent;white-space:nowrap;
+  transition:color .18s ease,border-color .18s ease;
+}
+.nav-links a:hover{color:var(--ink);border-bottom-color:var(--accent)}
+.nav-links a.nav-link-active{color:var(--ink);font-weight:700;border-bottom-color:var(--accent)}
+.btn-sm{padding:.55rem 1.1rem;font-size:.82rem;border-radius:999px}
+
+/* ── Hero ────────────────────────────────────────────── */
+.hero{
+  padding:clamp(2.4rem,5vw,3.6rem) 0 0;text-align:center;overflow:clip;
+  background:
+    radial-gradient(90% 60% at 50% -4%,#EFE9DA 0%,rgba(246,243,235,0) 62%),
+    var(--paper);
+}
+.hero-in{max-width:62rem;margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem)}
+.hero h1{
+  margin:1.25rem auto 0;
+  font-family:var(--serif);font-weight:800;letter-spacing:-.02em;line-height:1.04;
+  font-size:clamp(2.6rem,6vw,4.8rem);
+  text-wrap:balance;max-width:20ch;
+}
+.hero .lede{
+  margin:1.15rem auto 0;max-width:46rem;
+  font-size:clamp(1.02rem,1.5vw,1.18rem);line-height:1.62;color:var(--ink-2);
+}
+.hero-cta{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;margin-top:1.7rem}
+.hero-note{margin-top:.95rem;font-size:.84rem;color:var(--muted)}
+
+/* Hero entrance (selector-based, no markup change) */
+.hero .pill,.hero h1,.hero .lede,.hero-cta,.hero-note,.picker,.hero-chips{
+  opacity:0;animation:rise .9s var(--ease) forwards;
+}
+.hero h1{animation-delay:.1s}
+.hero .lede{animation-delay:.18s}
+.hero-cta{animation-delay:.26s}
+.hero-note,.picker,.hero-chips{animation-delay:.34s}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+
+/* Strip (carrusel ligero) */
+.strip{
+  margin-top:clamp(2rem,3.6vw,2.9rem);
+  padding-top:.3rem;padding-bottom:1.4rem;
+  display:flex;gap:.9rem;
+  overflow-x:auto;
+  padding-left:clamp(1.25rem,4vw,2.5rem);
+  padding-right:clamp(1.25rem,4vw,2.5rem);
+  scrollbar-width:none;
+  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 2rem,#000 calc(100% - 5rem),transparent);
+  mask-image:linear-gradient(to right,transparent 0,#000 2rem,#000 calc(100% - 5rem),transparent);
+}
+.strip::-webkit-scrollbar{display:none}
+.strip figure{flex:0 0 auto;width:clamp(176px,19vw,238px)}
+.strip img{
+  width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px;
+  background:#EFEAE0;border:1px solid var(--line);
+  transition:transform .25s var(--ease),box-shadow .25s var(--ease);
+}
+.strip figure:hover img{transform:translateY(-4px);box-shadow:var(--shadow-2)}
+.strip figcaption{
+  margin-top:.6rem;font-size:.78rem;font-weight:600;color:var(--ink-2);
+  letter-spacing:.02em;text-align:left;
+}
+.strip-wrap{position:relative}
+.strip-btn{
+  position:absolute;top:calc(50% - 32px);transform:translateY(-50%);
+  width:44px;height:44px;border-radius:50%;
+  background:var(--surface);border:1px solid var(--line-2);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--ink);cursor:pointer;z-index:3;
+  box-shadow:0 12px 30px rgba(27,23,16,.14);
+  transition:opacity .2s ease,transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.strip-btn:hover{transform:translateY(-50%) scale(1.06);border-color:var(--ink)}
+.strip-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.strip-prev{left:.9rem}
+.strip-next{right:.9rem}
+.strip-btn.btn-faded{opacity:.25;pointer-events:none}
+@media (max-width:760px){.strip-btn{display:none}}
+
+/* ── Section headers ─────────────────────────────────── */
+section{padding-top:clamp(4.2rem,8vw,6.8rem)}
+.sec-head{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  gap:1.5rem;flex-wrap:wrap;
+}
+.sec-head h2{
+  font-family:var(--serif);font-weight:700;letter-spacing:-.015em;line-height:1.12;
+  font-size:clamp(1.6rem,3vw,2.45rem);max-width:24ch;text-wrap:balance;
+}
+.sec-head .count{
+  font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+  color:#B9801F;white-space:nowrap;padding-bottom:.4rem;
+}
+.sec-sub{margin-top:.9rem;max-width:54ch;color:var(--ink-2)}
+
+/* ── Galería ─────────────────────────────────────────── */
+.grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(min(15rem,100%),1fr));
+  gap:.85rem;margin-top:2.6rem;
+}
+.card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card);
+  overflow:hidden;box-shadow:var(--shadow-1);
+  transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s var(--ease);
+}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-2);border-color:var(--line-2)}
+.card img{width:100%;aspect-ratio:1;object-fit:cover;background:#EFEAE0;transition:transform .6s var(--ease)}
+.card:hover img{transform:scale(1.045)}
+.card .body{padding:.95rem 1.05rem 1.05rem}
+.card .style{
+  display:block;font-family:var(--mono);font-size:.66rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--accent-deep);
+}
+.card .name{margin-top:.32rem;font-weight:700;font-size:1.06rem;line-height:1.3;letter-spacing:-.01em}
+.card .meta{margin-top:.38rem;font-size:.87rem;color:var(--muted);line-height:1.5}
+.card .where{
+  display:block;margin-top:.7rem;padding-top:.6rem;border-top:1px solid var(--line);
+  font-family:var(--mono);font-size:.64rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink-2);
+}
+/* Card -> probador CTA */
+.card-try{display:inline-flex;align-items:center;gap:.45rem;margin-top:.85rem;padding:.52rem .98rem;border:1px solid var(--line-2);border-radius:999px;background:transparent;font-size:.84rem;font-weight:700;color:var(--ink);text-decoration:none;transition:background .2s var(--ease),border-color .2s var(--ease),color .2s var(--ease),transform .2s var(--ease)}
+.card-try .arr{transition:transform .2s var(--ease)}
+.card-try:hover{border-color:var(--accent);background:var(--accent);color:#fff;transform:translateY(-2px)}
+.card-try:hover .arr{transform:translateX(3px)}
+.card-try:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.gal-note{margin-top:1.5rem;font-size:.85rem;color:var(--muted);max-width:62ch}
+
+/* Filter note */
+.filter-note{margin:0 0 1.2rem;font-size:.85rem;color:var(--muted)}
+.filter-note button{
+  font:inherit;font-size:.85rem;font-weight:700;color:var(--ink);
+  background:none;border:none;padding:0 0 .1rem;cursor:pointer;
+  border-bottom:1.5px solid var(--accent);
+}
+
+/* Explore link */
+.explore-link{
+  display:inline-block;margin:1.3rem auto 0;text-decoration:none;
+  font-family:var(--mono);font-size:.7rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ink-2);padding-bottom:.2rem;border-bottom:1px solid transparent;
+  transition:color .18s ease,border-color .18s ease;
+}
+.explore-link:hover{color:var(--ink);border-bottom-color:var(--accent)}
+.explore-link .arr2{color:var(--accent);letter-spacing:0}
+
+/* Picker (page 1) */
+.picker{
+  position:relative;max-width:660px;margin:1.7rem auto 0;text-align:left;
+  background:var(--surface);border:1px solid var(--line);border-radius:18px;
+  padding:1.05rem 1.3rem 1.15rem;box-shadow:var(--shadow-1);
+}
+.picker-q{font-family:var(--mono);font-size:.68rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.picker-chips{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.75rem;padding-right:3.4rem}
+.pchip{
+  font:inherit;font-size:.8rem;font-weight:600;color:var(--ink-2);
+  background:var(--surface);border:1px solid var(--line-2);border-radius:999px;
+  padding:.4rem .95rem;cursor:pointer;
+  transition:border-color .18s ease,color .18s ease,background .18s ease;
+}
+.pchip:hover{border-color:var(--accent);color:var(--ink)}
+.pchip-active{background:var(--ink);color:#F6F2E8;border-color:var(--ink)}
+.picker-go{
+  position:absolute;right:1.05rem;bottom:1.05rem;width:42px;height:42px;border-radius:50%;
+  background:var(--ink);color:#F6F2E8;border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;font-size:1.05rem;
+  transition:transform .2s ease,background .2s ease;
+}
+.picker-go:hover{transform:translateY(-2px);background:var(--accent)}
+@media (max-width:640px){
+  .picker{padding:1rem 1.05rem 1.1rem}
+  .picker-chips{padding-right:0}
+  .picker-go{position:static;margin-top:.9rem;width:100%;height:44px;border-radius:12px}
+}
+
+/* Hero chips (pages 2-3) */
+.hero-chips{display:flex;gap:.55rem;justify-content:center;flex-wrap:wrap;margin-top:1.4rem}
+.hero-chips a{
+  text-decoration:none;font-size:.8rem;font-weight:600;color:var(--ink-2);
+  background:var(--surface);border:1px solid var(--line);
+  padding:.45rem 1.05rem;border-radius:999px;
+  transition:border-color .18s ease,color .18s ease,transform .18s ease;
+}
+.hero-chips a:hover{border-color:var(--accent);color:var(--ink);transform:translateY(-1px)}
+
+/* ── Dark bands ──────────────────────────────────────── */
+.band-dark{
+  margin-top:clamp(4.6rem,9vw,7.2rem);
+  background:var(--dark);
+  color:var(--cream);
+}
+.band-dark .inner{
+  max-width:72rem;margin:0 auto;
+  padding:clamp(3.8rem,8vw,6.4rem) clamp(1.25rem,4vw,2.5rem);
+}
+.band-dark .inner-tools{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.band-dark .pill{background:var(--dark-2);border-color:var(--dark-3);color:var(--cream-dim);box-shadow:none}
+.band-dark h2{
+  margin-top:1.4rem;font-family:var(--serif);font-weight:700;letter-spacing:-.015em;line-height:1.08;
+  font-size:clamp(1.9rem,4vw,3.1rem);color:#F8F4EA;max-width:20ch;text-wrap:balance;
+}
+.band-dark p{margin-top:1.15rem;max-width:48ch;color:var(--cream-dim);line-height:1.66}
+.dark-cta{margin-top:2rem}
+.band-dark .db-ghost{color:#F6F2E8;border-color:rgba(246,242,232,.45);background:transparent}
+.band-dark .db-ghost:hover{background:rgba(246,242,232,.09);border-color:#F6F2E8}
+.band-dark .side{justify-self:end;text-align:right}
+.band-dark .side .btn{margin-bottom:.9rem}
+.band-dark .soon{
+  display:block;font-size:.72rem;font-weight:500;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--cream-dim);opacity:.8;
+}
+
+/* Tool cards (pages 2-3) */
+.tool-cards{display:flex;flex-direction:column;gap:.9rem}
+.tool-card{
+  background:rgba(255,252,244,.04);border:1px solid rgba(255,252,244,.12);
+  border-radius:16px;padding:1.2rem 1.4rem;
+  transition:background .2s ease,border-color .2s ease,transform .2s ease;
+}
+.tool-card:hover{background:rgba(255,252,244,.07);border-color:rgba(255,252,244,.22);transform:translateY(-2px)}
+.tool-tag{display:block;font-family:var(--mono);font-size:.64rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem}
+.tool-card h3{font-size:1.05rem;font-weight:800;color:#F8F4EA;letter-spacing:-.01em}
+.tool-card p{margin-top:.32rem;font-size:.87rem;color:rgba(255,252,244,.58);line-height:1.6;max-width:none}
+
+/* Try-on band (page 1) */
+.band-tryon{position:relative;overflow:hidden}
+.tryon-media{position:absolute;inset:0;z-index:0;background:radial-gradient(130% 120% at 50% -8%,#2A2214 0%,#1B1509 55%,#141009 100%)}
+.tryon-bg{display:none}
+.tryon-veil{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(22,18,11,.9) 0%,rgba(22,18,11,.62) 42%,rgba(22,18,11,.94) 100%);
+}
+.tryon-in{position:relative;z-index:1}
+.tryon-head{max-width:58rem;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center}
+.tryon-head p{max-width:54ch}
+.tryon-stage{
+  display:flex;align-items:center;justify-content:center;
+  gap:clamp(.9rem,2.6vw,2rem);flex-wrap:wrap;
+  margin-top:clamp(2.6rem,5vw,3.8rem);
+}
+.tcard{
+  margin:0;background:#F7F3E9;border-radius:14px;padding:9px 9px 0;
+  box-shadow:0 26px 60px -26px rgba(0,0,0,.75);
+}
+.tcard img{display:block;border-radius:6px;width:100%;height:auto;aspect-ratio:1;object-fit:cover;background:#EAE4D6}
+.tcard figcaption{
+  padding:.5rem .2rem .55rem;text-align:center;
+  font-family:var(--mono);font-size:.66rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:#5A5145;
+}
+.tcard-a{width:172px;transform:rotate(-4deg)}
+.tcard-c{width:172px;transform:rotate(4deg)}
+.tcard-b{width:min(310px,72vw);position:relative;z-index:2;box-shadow:0 34px 74px -28px rgba(0,0,0,.8)}
+.tbadge{
+  position:absolute;top:15px;left:50%;transform:translateX(-50%);z-index:3;
+  display:inline-flex;align-items:center;gap:.42rem;
+  background:rgba(247,243,233,.97);border-radius:999px;padding:.32rem .85rem;
+  font-family:var(--mono);font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#2B251D;
+  box-shadow:0 8px 20px -8px rgba(0,0,0,.6);
+}
+.tdot{width:7px;height:7px;border-radius:50%;background:#3FAE5A}
+.tryon-arr{color:rgba(255,255,255,.4);font-size:1.4rem;font-weight:800}
+.tryon-steps{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,3vw,2.2rem);
+  margin-top:clamp(2.8rem,5vw,4rem);
+  border-top:1px solid rgba(255,252,244,.14);
+  padding-top:clamp(1.7rem,3.4vw,2.5rem);
+}
+.tstep .tn{font-family:var(--mono);font-size:.66rem;font-weight:500;letter-spacing:.22em;color:var(--accent)}
+.tstep h3{margin-top:.5rem;font-size:1rem;font-weight:800;color:#F8F4EA;letter-spacing:-.01em}
+.tstep p{margin-top:.4rem;font-size:.87rem;color:rgba(255,252,244,.6);line-height:1.62;max-width:none}
+@media (max-width:760px){
+  .tryon-stage{flex-direction:column;gap:.85rem}
+  .tryon-arr{transform:rotate(90deg)}
+  .tryon-steps{grid-template-columns:1fr;gap:1.4rem}
+}
+
+/* ── Guide ───────────────────────────────────────────── */
+#guia{background:var(--paper-2)}
+.guide-block + .guide-block{margin-top:clamp(3.6rem,7vw,5.2rem)}
+.guide-block h2{
+  font-family:var(--serif);font-weight:700;letter-spacing:-.015em;line-height:1.14;
+  font-size:clamp(1.5rem,2.8vw,2.15rem);max-width:26ch;text-wrap:balance;
+}
+.guide-block .prose{max-width:64ch;margin-top:1.25rem;color:var(--ink-2)}
+.guide-block .prose p + p{margin-top:.95rem}
+.guide-block .prose em{font-style:italic}
+.guide-block .prose a{color:var(--accent-deep);text-decoration:none;border-bottom:1px solid rgba(158,108,22,.4);transition:border-color .18s ease,color .18s ease}
+.guide-block .prose a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+.guide-block .prose .dropcap::first-letter{
+  font-family:var(--serif);font-weight:700;font-size:2.9em;line-height:.82;
+  float:left;padding:.06em .16em 0 0;color:var(--accent-deep);
+}
+
+/* Split block (page 1) */
+.guide-block.split{display:grid;grid-template-columns:1.05fr .95fr;column-gap:clamp(1.6rem,4vw,3.2rem);align-items:start}
+.guide-block.split > h2{grid-column:1}
+.guide-block.split > .prose{grid-column:1}
+.guide-block.split > .gfig{grid-column:2;grid-row:1 / span 2;align-self:center;margin:0}
+@media (max-width:860px){
+  .guide-block.split{grid-template-columns:1fr}
+  .guide-block.split > h2,
+  .guide-block.split > .prose{grid-column:1}
+  .guide-block.split > .gfig{grid-row:auto;grid-column:1;margin-top:1.6rem}
+}
+
+.gfig{margin:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--surface);box-shadow:var(--shadow-1)}
+.gfig img{width:100%;display:block;aspect-ratio:1;object-fit:cover;background:#EFEAE0}
+.gfig figcaption{padding:.7rem 1rem;font-size:.78rem;color:var(--muted);line-height:1.5;border-top:1px solid var(--line)}
+.gwide{margin:1.8rem 0 2.2rem;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--surface);box-shadow:var(--shadow-1)}
+.gwide img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover;background:#EFEAE0}
+.gwide figcaption{padding:.7rem 1rem;font-size:.78rem;color:var(--muted);border-top:1px solid var(--line)}
+
+/* Style cards */
+.style-cards{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(min(19rem,100%),1fr));
+  gap:.9rem;margin-top:2.1rem;
+}
+.style-card{
+  display:flex;flex-direction:column;gap:.95rem;
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card);
+  padding:1.05rem 1.1rem 1.1rem;box-shadow:var(--shadow-1);
+  transition:transform .2s var(--ease),box-shadow .2s var(--ease),border-color .2s var(--ease);
+}
+.style-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-2);border-color:var(--line-2)}
+.sc-imgs{display:grid;grid-template-columns:1fr 1fr;gap:.55rem}
+.sc-imgs figure{margin:0}
+.sc-imgs img{
+  width:100%;aspect-ratio:1;object-fit:cover;display:block;
+  border-radius:8px;border:1px solid var(--line);background:#EFEAE0;padding:4px;
+}
+.sc-imgs figcaption{
+  margin-top:.35rem;text-align:center;
+  font-size:.58rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
+}
+.sc-body{min-width:0}
+.sc-body h3{margin:0 0 .38rem;font-weight:800;font-size:1rem;color:var(--ink);letter-spacing:-.01em}
+.sc-body p{font-size:.89rem;color:var(--ink-2);line-height:1.58}
+
+/* Facts */
+.facts{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(min(15rem,100%),1fr));
+  gap:.9rem;margin-top:2.1rem;
+}
+.fact{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card);
+  padding:1.25rem 1.3rem 1.35rem;box-shadow:var(--shadow-1);
+}
+.fact h3.label{
+  margin:0;font-family:var(--mono);font-size:.66rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--accent-deep);padding-bottom:.7rem;border-bottom:1px solid var(--line);
+}
+.fact p{margin-top:.7rem;font-size:.91rem;color:var(--ink-2);line-height:1.62}
+
+/* Steps */
+.steps{margin-top:2.3rem;display:grid;gap:.9rem;max-width:58rem}
+.step{
+  display:grid;grid-template-columns:3.2rem 1fr;gap:1.1rem;
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card);
+  padding:1.25rem 1.35rem;box-shadow:var(--shadow-1);
+  transition:transform .2s var(--ease),box-shadow .2s var(--ease);
+}
+.step:hover{transform:translateY(-2px);box-shadow:var(--shadow-2)}
+.step .no{
+  font-family:var(--serif);font-weight:700;font-size:1.35rem;color:#BC801F;letter-spacing:-.02em;
+  padding-top:.05rem;
+}
+.step h3{margin:0 0 .35rem;font-weight:800;font-size:1.02rem;letter-spacing:-.01em}
+.step p{font-size:.91rem;color:var(--ink-2);line-height:1.62}
+
+/* ── FAQ ─────────────────────────────────────────────── */
+.faq{margin-top:2.3rem;max-width:58rem}
+.faq details{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card);
+  margin-bottom:.75rem;box-shadow:var(--shadow-1);overflow:hidden;
+  transition:border-color .2s ease;
+}
+.faq details[open]{border-color:var(--line-2)}
+.faq summary{
+  list-style:none;cursor:pointer;display:flex;align-items:center;gap:1rem;
+  padding:1.15rem 1.3rem;font-weight:700;font-size:1rem;line-height:1.4;
+  transition:color .18s ease;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--accent-deep)}
+.faq summary:focus-visible{outline:2px solid var(--accent);outline-offset:-3px}
+.faq .plus{
+  margin-left:auto;flex:none;width:1.45rem;height:1.45rem;border-radius:50%;
+  border:1px solid var(--line-2);position:relative;
+  transition:transform .22s var(--ease),border-color .22s ease,background .22s ease;
+}
+.faq .plus::before,.faq .plus::after{
+  content:"";position:absolute;background:var(--ink-2);left:50%;top:50%;
+  transition:background .22s ease;
+}
+.faq .plus::before{width:.68rem;height:1.5px;transform:translate(-50%,-50%)}
+.faq .plus::after{width:1.5px;height:.68rem;transform:translate(-50%,-50%)}
+.faq details[open] .plus{transform:rotate(45deg);border-color:var(--accent);background:var(--accent-soft)}
+.faq details[open] .plus::before,.faq details[open] .plus::after{background:var(--accent-deep)}
+.faq .a{padding:0 1.3rem 1.3rem;max-width:62ch;color:var(--ink-2);font-size:.95rem}
+.faq .a p + p{margin-top:.7rem}
+
+/* ── CTA final ───────────────────────────────────────── */
+.cta-final{
+  margin-top:clamp(4.2rem,8vw,6.2rem);
+  text-align:center;
+}
+.cta-final h2{
+  font-family:var(--serif);font-weight:700;letter-spacing:-.015em;font-size:clamp(1.6rem,3vw,2.4rem);
+  max-width:24ch;margin:0 auto;text-wrap:balance;
+}
+.cta-final p{margin:1rem auto 0;max-width:46ch;color:var(--ink-2)}
+.cta-final .btns{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
+
+/* ── Related pages ───────────────────────────────────── */
+#otras{padding-top:clamp(3.4rem,6vw,5.2rem)}
+#otras h2{font-family:var(--serif);font-weight:700;font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-.015em;margin-bottom:1.7rem}
+.rel-cards{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.rel-card{
+  display:flex;align-items:center;gap:1.1rem;
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card);
+  padding:1.05rem 1.25rem;text-decoration:none;box-shadow:var(--shadow-1);
+  transition:transform .2s var(--ease),box-shadow .2s var(--ease),border-color .2s var(--ease);
+}
+.rel-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-2);border-color:var(--line-2)}
+.rel-card img{width:84px;height:84px;object-fit:cover;border-radius:8px;border:1px solid var(--line);flex:0 0 auto;background:#EFEAE0}
+.rel-body{display:flex;flex-direction:column;gap:.3rem;min-width:0}
+.rel-name{font-weight:800;font-size:1.02rem;color:var(--ink);letter-spacing:-.01em}
+.rel-desc{font-size:.85rem;color:var(--muted);line-height:1.5}
+.rel-arr{margin-left:auto;font-size:1.2rem;color:var(--accent);flex:0 0 auto;transition:transform .2s var(--ease)}
+.rel-card:hover .rel-arr{transform:translateX(4px)}
+@media (max-width:760px){.rel-cards{grid-template-columns:1fr}}
+
+/* ── Footer ──────────────────────────────────────────── */
+footer{margin-top:clamp(4.2rem,8vw,6.2rem);border-top:1px solid var(--line);background:var(--surface)}
+.foot{
+  max-width:72rem;margin:0 auto;
+  padding:2.9rem clamp(1.25rem,4vw,2.5rem) 2.5rem;
+}
+.foot .top{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.foot .tagline{margin-top:.7rem;max-width:46ch;font-size:.9rem;color:var(--muted)}
+.foot .links{display:flex;gap:1.4rem;flex-wrap:wrap;align-items:flex-start}
+.foot .links a{
+  text-decoration:none;font-size:.87rem;font-weight:600;color:var(--ink-2);
+  border-bottom:2px solid transparent;padding:.4rem .15rem;
+  transition:color .18s ease,border-color .18s ease;
+}
+.foot .links a:hover{color:var(--ink);border-bottom-color:var(--accent)}
+.foot .legal{
+  margin-top:2.3rem;padding-top:1.25rem;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+  font-size:.78rem;color:var(--muted);
+}
+
+/* ── Responsive ──────────────────────────────────────── */
+@media (max-width:1100px){
+  .brand span{display:none}
+  .nav-links{gap:.9rem}
+  .nav-links a{font-size:.83rem}
+}
+@media (max-width:820px){
+  .band-dark .inner-tools{grid-template-columns:1fr;gap:1.9rem}
+  .band-dark .inner{grid-template-columns:1fr}
+  .band-dark .side{justify-self:start;text-align:left}
+}
+@media (max-width:640px){
+  .nav-in{flex-wrap:wrap;gap:.6rem}
+  .nav-links{display:flex;order:3;width:100%;gap:1.2rem;margin-left:0;overflow-x:auto;scrollbar-width:none;padding-bottom:.15rem}
+  .nav-links::-webkit-scrollbar{display:none}
+  .nav .btn-sm{margin-left:auto}
+  .strip{padding-left:1.25rem}
+  .hero h1{font-size:clamp(2.15rem,8.8vw,2.95rem)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none !important;animation:none !important}
+  .hero .pill,.hero h1,.hero .lede,.hero-cta,.hero-note,.picker,.hero-chips{opacity:1}
+}
+
+
+/* Legal pages */
+.lg{max-width:860px;margin:0 auto;padding:46px 22px 24px}
+.lg .pill{margin-bottom:.9rem}
+.lg h1{font-family:var(--serif);font-size:clamp(1.9rem,4.6vw,2.7rem);font-weight:700;line-height:1.14;margin:.5rem 0 .8rem;color:var(--ink)}
+.lg .lg-lede{font-size:1.04rem;line-height:1.78;color:var(--ink-2);max-width:66ch}
+.lg .upd{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:1rem 0 0}
+.lg h2{font-family:var(--serif);font-size:1.42rem;font-weight:700;margin:2.3rem 0 .7rem;color:var(--ink)}
+.lg h3{font-size:1rem;font-weight:700;margin:1.5rem 0 .45rem;color:var(--ink)}
+.lg p,.lg li{font-size:.95rem;line-height:1.82;color:var(--ink-2)}
+.lg p{margin:0 0 .85rem}
+.lg ul{margin:.2rem 0 1.1rem;padding-left:1.25rem}
+.lg li{margin:.4rem 0}
+.lg a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.lg a:hover{color:var(--accent)}
+@media (max-width:820px){.lg{padding:32px 16px 18px}.lg h2{font-size:1.22rem}}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Principal">
+  <div class="nav-in">
+    <a class="brand" href="../"><svg class="bmark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 2.5c0 0-5.6 7.6-5.6 11.7a5.6 5.6 0 0 0 11.2 0C21.6 10.1 16 2.5 16 2.5Z" fill="#C98A26"/><path d="M4.5 28c3.9-2.2 7.6-3.3 11.5-3.3s7.6 1.1 11.5 3.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg><span class="btxt">Tinta <em>Piel</em></span> <span class="bsub">estudio de tatuajes</span></a>
+    <div class="nav-links">
+      <a href="../tatuaje-de-leon-en-la-pierna-para-mujer/" class="nav-link">León en la pierna</a>
+      <a href="../tatuaje-de-leona-en-la-pierna/" class="nav-link">Leona en la pierna</a>
+      <a href="../tatuajes-de-leones-en-la-pierna/" class="nav-link">Leones en la pierna</a>
+      <a href="../precios/" class="nav-link">Planes</a>
+    </div>
+    <a class="nav-login" href="../tools/simulador/?login=1" data-auth-open="login">Iniciar sesión</a>
+    <a class="btn btn-dark btn-sm" href="../tools/simulador/">Probar diseños</a>
+  </div>
+</nav>
+
+<main class="lg">
+<span class="pill"><span class="spark">✦</span>Legal</span>
+<h1>Política de Privacidad</h1>
+<p class="lg-lede">Tu foto, tu correo y tu historial de créditos no son material publicitario: son datos que nos confiaste para poder probar tatuajes antes de la aguja. Esta página explica qué guardamos, para qué lo usamos, con quién se comparte y cómo hacer que desaparezca cuando lo pidas.</p>
+
+<h2>Quiénes somos y cómo contactarnos</h2>
+<p>Tinta Piel es un sitio editorial y de herramientas para elegir tatuajes: guías de león, leona y leones en la pierna, y un simulador con IA que superpone diseños sobre fotos reales. El tratamiento de tus datos en este sitio corresponde al proyecto Tinta Piel. Para cualquier asunto relacionado con datos personales —acceso, corrección, supresión u oposición—, el canal oficial es support@tintapiel.com.</p>
+
+<h2>Qué datos recopilamos</h2>
+<h3>Datos de tu cuenta</h3>
+<p>Para usar el simulador con IA necesitas una cuenta. Guardamos tu correo, tu contraseña cifrada (o, si entras con Google, el identificador que Google nos entrega al iniciar sesión), tu saldo de créditos, tus compras y las composiciones que generas. Sin esos datos el servicio no podría funcionar: no habría a qué asociar tus créditos ni dónde guardar tus resultados.</p>
+<h3>Fotos y diseños que subes</h3>
+<p>Las fotos que subes se usan para una sola cosa: generar la prueba que pediste. Cuando solicitas el efecto con IA, la imagen viaja desde tu navegador a nuestro servidor y de ahí a nuestro procesador de IA, que devuelve el resultado. El resultado queda guardado en tu cuenta para que puedas volver a verlo; no se publica, no entra en ninguna galería y no se usa para entrenar modelos.</p>
+<p>Todo lo que haces en el lienzo sin IA —subir una foto o un diseño, colocarlo, ajustarlo y descargar la composición— ocurre dentro de tu propio navegador y no sale de tu dispositivo.</p>
+<h3>Uso del sitio</h3>
+<p>Registramos visitas con un identificador de sesión, la página vista, el tiempo de permanencia, el enlace de procedencia, la dirección IP, el país y el navegador. Sirve para tres cosas concretas: saber qué guías se leen de verdad, detectar fallos y proteger el sistema frente a abusos —por ejemplo, el uso automatizado de créditos—. Estas métricas no se usan para publicidad.</p>
+<h3>Pagos</h3>
+<p>El cobro lo procesa Creem en su propia pasarela. Los datos de tu tarjeta nunca pasan por nuestros servidores: nosotros solo conservamos el estado de la orden —qué plan, cuándo y con cuántos créditos— para poder darte soporte y llevar el control de tus renovaciones.</p>
+
+<h2>Para qué usamos tus datos</h2>
+<ul>
+<li>Crear y mantener tu cuenta, y gestionar créditos, planes y renovaciones.</li>
+<li>Generar tus pruebas con IA cuando las pides.</li>
+<li>Responder a los mensajes que nos envías.</li>
+<li>Entender el uso del sitio en conjunto —qué guías funcionan, dónde se pierde la gente— para mejorar el contenido.</li>
+<li>Mantener el servicio seguro y disponible: límites técnicos, prevención de abuso y corrección de errores.</li>
+</ul>
+<p>Fuera de eso, nada. Hoy no usamos tus datos para publicidad de terceros y no vendemos información personal a nadie. Si alguna vez esa frase tuviera que cambiar, lo diríamos en esta política antes de aplicar cualquier cambio.</p>
+
+<h2>Con quién se comparten</h2>
+<p>Para que el sitio funcione hacen falta proveedores, y algunos tratan datos por cuenta nuestra. La lista completa es corta:</p>
+<ul>
+<li>Vercel — alojamiento del sitio.</li>
+<li>Cloudflare — DNS y capa de red.</li>
+<li>Google — inicio de sesión con Google y tipografías del sitio.</li>
+<li>Creem — pagos, suscripciones y recibos.</li>
+<li>Resend — correos del servicio, como la verificación de la cuenta.</li>
+<li>Proveedor de IA para imágenes — solo cuando pides el efecto realista: la foto se envía para generar tu resultado.</li>
+</ul>
+<p>Cada uno recibe únicamente lo necesario para su función, actúa por cuenta nuestra y no puede usar tus datos para fines propios. No hay más destinatarios.</p>
+
+<h2>Cuánto tiempo conservamos los datos</h2>
+<p>Tu cuenta y tus composiciones: hasta que pidas su eliminación. Los registros de uso: el tiempo necesario para las estadísticas del sitio y la seguridad, con revisión periódica. Los registros de compra: mientras la ley contable y fiscal aplicable lo exija.</p>
+
+<h2>Cómo protegemos tus datos</h2>
+<p>Las comunicaciones con el sitio viajan cifradas (HTTPS). El acceso a los sistemas está restringido a lo necesario para operar, y no te pediremos tu contraseña por correo ni por ningún otro canal. Si detectamos un incidente que afecte tus datos, actuaremos para contenerlo y, cuando corresponda, te lo comunicaremos.</p>
+
+<h2>Cookies y almacenamiento local</h2>
+<p>Usamos almacenamiento del navegador para lo imprescindible: mantener tu sesión, recordar tu saldo en pantalla y medir visitas de forma agregada. No hay cookies de publicidad ni seguimiento entre sitios. El detalle completo —qué se guarda, dónde y cómo borrarlo— está en nuestra <a href="../cookies/">Política de Cookies</a>.</p>
+
+<h2>Lo que no hacemos con tus datos</h2>
+<p>Para que no tengas que deducirlo leyendo entre líneas:</p>
+<ul>
+<li>No vendemos ni alquilamos información personal a nadie.</li>
+<li>No usamos tus fotos para publicidad ni para entrenar modelos.</li>
+<li>No mostramos tu foto ni tus resultados en el sitio.</li>
+<li>No pedimos tu contraseña por correo ni por ningún otro canal.</li>
+<li>No compartimos tus datos con terceros para fines propios de esos terceros.</li>
+</ul>
+
+<h2>Tus derechos</h2>
+<p>Si vives en Colombia, Argentina o México, las leyes de tu país te reconocen derechos sobre tus datos personales: Colombia (Ley 1581 de 2012), Argentina (Ley 25.326) y México (Ley Federal de Protección de Datos Personales en Posesión de los Particulares). Aterrizado a la práctica de este sitio:</p>
+<ul>
+<li>Acceso: te contamos qué datos tenemos sobre ti.</li>
+<li>Corrección: arreglamos lo que esté equivocado.</li>
+<li>Supresión: eliminamos tu cuenta y tu contenido —por ahora, el camino es escribirnos.</li>
+<li>Oposición: puedes pedir que dejemos de usar tus datos para una finalidad concreta.</li>
+</ul>
+<p>La vía para todo lo anterior es support@tintapiel.com, escribiendo desde el correo de tu cuenta para que podamos verificar la solicitud. No hay letra chica más allá de eso.</p>
+
+<h2>Menores de edad</h2>
+<p>El sitio está pensado para adultos. No creamos cuentas ni recopilamos datos de menores de 18 años a sabiendas, y si detectamos una cuenta que no debería existir, la eliminamos.</p>
+
+<h2>Cambios a esta política</h2>
+<p>Cuando esta política cambie, actualizamos la fecha del encabezado. Si el cambio es importante —por ejemplo, una finalidad nueva para tus datos—, además lo avisamos por correo o con un aviso visible en el sitio antes de aplicarlo.</p>
+
+<h2>Contacto</h2>
+<p>¿Dudas sobre tus datos? Escribe a support@tintapiel.com con el asunto «Privacidad» y te respondemos desde ahí.</p>
+<p class="upd">Última actualización: 18 de septiembre de 2026</p>
+</main>
+
+<footer>
+  <div class="foot">
+    <div class="top">
+      <div>
+        <a class="brand" href="../"><svg class="bmark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 2.5c0 0-5.6 7.6-5.6 11.7a5.6 5.6 0 0 0 11.2 0C21.6 10.1 16 2.5 16 2.5Z" fill="#C98A26"/><path d="M4.5 28c3.9-2.2 7.6-3.3 11.5-3.3s7.6 1.1 11.5 3.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg><span class="btxt">Tinta <em>Piel</em></span> <span class="bsub">estudio de tatuajes</span></a>
+        <p class="tagline">Leones, leonas y lo que protegen: guías honestas y herramientas para decidir tu tatuaje con los ojos abiertos.</p>
+      </div>
+      <div class="links">
+        <a href="../tatuaje-de-leona-en-la-pierna/">Tatuaje de leona en la pierna</a>
+        <a href="../tatuajes-de-leones-en-la-pierna/">Tatuajes de leones en la pierna</a>
+        <a href="#galeria">Galería</a>
+        <a href="#guia">Guía</a>
+        <a href="#preguntas">Preguntas frecuentes</a>
+        <a href="../tools/simulador/">Probador de tatuajes virtual</a>
+        <a href="../precios/">Planes y créditos</a>
+        <a href="../privacidad/">Privacidad</a>
+        <a href="../terminos/">Términos</a>
+        <a href="../cookies/">Cookies</a>
+        <a href="../contacto/">Contacto</a>
+        <a href="../sobre-nosotros/">Sobre nosotros</a>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© 2026 Tinta Piel. Hecho con tinta y cuidado.</span>
+      <span>Diseños de referencia originales · guía informativa</span>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://tintapiel.com/privacidad/#webpage",
+      "url": "https://tintapiel.com/privacidad/",
+      "name": "Política de Privacidad",
+      "description": "Qué datos guarda Tinta Piel, para qué se usan, con quién se comparten y cómo pedir su eliminación. Tu foto y tu cuenta, explicadas en claro.",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@id": "https://tintapiel.com/#website"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Política de Privacidad"
+      },
+      "breadcrumb": {
+        "@id": "https://tintapiel.com/privacidad/#breadcrumb"
+      },
+      "datePublished": "2026-09-18",
+      "dateModified": "2026-09-18"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://tintapiel.com/privacidad/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://tintapiel.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Política de Privacidad",
+          "item": "https://tintapiel.com/privacidad/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://tintapiel.com/#organization",
+      "name": "Tinta Piel",
+      "url": "https://tintapiel.com/",
+      "description": "Guías y herramientas para elegir tu tatuaje antes de tatuarte."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://tintapiel.com/#website",
+      "url": "https://tintapiel.com/",
+      "name": "Tinta Piel",
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://tintapiel.com/#organization"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- 访问统计（进入次数/停留时长 → 后台「数据统计-用户统计」；失败不影响页面） -->
+    <script>
+(function() {
+  try {
+    var TRACK_URL = ((location.protocol === 'file:' || location.port === '8770' || location.port === '8000')
+      ? 'http://127.0.0.1:8010/api/v1' : '/api/v1') + '/site/track/visit';
+    var SID_KEY = 'tt:visit:sid';
+    var SEC_KEY = 'tt:visit:sec';
+    var sid = null;
+    var baseSec = 0;
+    try {
+      sid = sessionStorage.getItem(SID_KEY);
+      baseSec = Number(sessionStorage.getItem(SEC_KEY)) || 0;
+    } catch (e) { /* 隐私模式等：降级为内存会话 */ }
+    if (!sid) {
+      sid = 'v-' + Date.now().toString(36) + '-' +
+        Math.random().toString(36).slice(2, 10) + Math.random().toString(36).slice(2, 10);
+      try { sessionStorage.setItem(SID_KEY, sid); } catch (e) {}
+    }
+
+    var t0 = Date.now();
+    var lastSentSec = -1;
+
+    function trackReport(totalSec) {
+      var headers = { 'Content-Type': 'application/json' };
+      try {
+        var token = localStorage.getItem('tt:token');
+        if (token) headers['Authorization'] = 'Bearer ' + token;
+      } catch (e) {}
+      var body = JSON.stringify({
+        sessionId: sid,
+        page: location.pathname,
+        referrer: document.referrer || '',
+        durationSec: Math.max(0, Math.round(totalSec))
+      });
+      try {
+        if (typeof fetch === 'function') {
+          var p = fetch(TRACK_URL, { method: 'POST', headers: headers, body: body, keepalive: true });
+          if (p && p.catch) p.catch(function() {});
+        } else if (navigator.sendBeacon) {
+          navigator.sendBeacon(TRACK_URL, new Blob([body], { type: 'application/json' }));
+        }
+      } catch (e) { /* 统计失败不影响页面 */ }
+    }
+
+    function totalSec() { return baseSec + (Date.now() - t0) / 1000; }
+    function trackFlush(force) {
+      var total = totalSec();
+      if (!force && total - lastSentSec < 30) return;
+      lastSentSec = total;
+      try { sessionStorage.setItem(SEC_KEY, String(Math.round(total))); } catch (e) {}
+      trackReport(total);
+    }
+
+    trackReport(baseSec); /* 进入上报：新会话创建记录 / 同会话跨页续报累计时长 */
+    var trackTimer = setInterval(function() { trackFlush(false); }, 60000);
+    window.addEventListener('pagehide', function() {
+      clearInterval(trackTimer);
+      trackFlush(true);
+    });
+    document.addEventListener('visibilitychange', function() {
+      if (document.visibilityState === 'hidden') trackFlush(true);
+    });
+  } catch (e) { /* 统计初始化失败不影响页面 */ }
+})();
+    </script>
+<script src="../assets/auth-widget.js" defer></script>
+</body>
+</html>

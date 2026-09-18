@@ -9,15 +9,15 @@
 <meta property="og:site_name" content="Tinta Piel">
 <meta property="og:title" content="Planes y Créditos: Simulador de Tatuajes con IA | Tinta Piel">
 <meta property="og:description" content="Elige tu plan de créditos para probar tatuajes con efecto real sobre tu foto: semanal, mensual o pase anual. Pago seguro con tarjeta.">
-<meta property="og:url" content="https://tintapiel.com/pricing/">
-<meta property="og:image" content="https://tintapiel.com/pricing/og-image.png">
+<meta property="og:url" content="https://tintapiel.com/precios/">
+<meta property="og:image" content="https://tintapiel.com/precios/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Planes y Créditos: Simulador de Tatuajes con IA | Tinta Piel">
 <meta name="twitter:description" content="Elige tu plan de créditos para probar tatuajes con efecto real sobre tu foto: semanal, mensual o pase anual. Pago seguro con tarjeta.">
-<meta name="twitter:image" content="https://tintapiel.com/pricing/og-image.png">
-<link rel="canonical" href="https://tintapiel.com/pricing/">
+<meta name="twitter:image" content="https://tintapiel.com/precios/og-image.png">
+<link rel="canonical" href="https://tintapiel.com/precios/">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314110D'/%3E%3Cpath d='M16 7c0 0-5.4 7.2-5.4 11.2a5.4 5.4 0 0 0 10.8 0C21.4 14.2 16 7 16 7Z' fill='%23C98A26'/%3E%3Cpath d='M8.5 25.6c2.6-1.7 5.1-2.5 7.5-2.5s4.9.8 7.5 2.5' stroke='%23C98A26' stroke-width='2' stroke-linecap='round' fill='none' opacity='.85'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -114,7 +114,7 @@ footer{margin-top:clamp(2.6rem,6vw,4rem);border-top:1px solid var(--line);backgr
 .auth-overlay{position:fixed;inset:0;background:rgba(27,23,16,.45);display:flex;align-items:center;justify-content:center;z-index:60;opacity:0;pointer-events:none;transition:opacity .22s ease}
 .auth-overlay.open{opacity:1;pointer-events:auto}
 .auth-card{position:relative;width:min(400px,92vw);background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 30px 80px -30px rgba(27,23,16,.5)}
-.auth-card h2{font-family:var(--serif);font-size:1.35rem;font-weight:800;margin:0 0 .3rem}
+.auth-card h2,.auth-card .auth-title{font-family:var(--serif);font-size:1.35rem;font-weight:800;margin:0 0 .3rem}
 .auth-card p.asub{margin:0 0 14px;font-size:.8rem;color:var(--muted);line-height:1.5}
 .auth-tabs{display:flex;gap:6px;margin-bottom:14px}
 .auth-tabs button{flex:1;font:inherit;font-size:.78rem;font-weight:700;padding:.5rem;border-radius:9px;border:1.5px solid var(--line);background:#fff;color:var(--muted);cursor:pointer}
@@ -157,7 +157,7 @@ footer{margin-top:clamp(2.6rem,6vw,4rem);border-top:1px solid var(--line);backgr
       <a href="../tatuaje-de-leon-en-la-pierna-para-mujer/" class="nav-link">León</a>
       <a href="../tatuaje-de-leona-en-la-pierna/" class="nav-link">Leona</a>
       <a href="../tatuajes-de-leones-en-la-pierna/" class="nav-link">Leones</a>
-      <a href="../tools/probador/" class="nav-link">Simulador virtual</a>
+      <a href="../tools/simulador/" class="nav-link">Simulador virtual</a>
       <a href="./" class="nav-link nav-link-active">Planes</a>
     </div>
   </div>
@@ -193,10 +193,15 @@ footer{margin-top:clamp(2.6rem,6vw,4rem);border-top:1px solid var(--line);backgr
         <p class="tagline">Prueba tatuajes con IA sobre fotos reales antes de sentarte en la silla del tatuador.</p>
       </div>
       <div class="links">
-        <a href="../tools/probador/">Simulador de tatuajes virtual</a>
+        <a href="../tools/simulador/">Simulador de tatuajes virtual</a>
         <a href="../tatuaje-de-leon-en-la-pierna-para-mujer/">Tatuaje de león en la pierna para mujer</a>
         <a href="../tatuaje-de-leona-en-la-pierna/">Tatuaje de leona en la pierna</a>
         <a href="../tatuajes-de-leones-en-la-pierna/">Tatuajes de leones en la pierna</a>
+        <a href="../privacidad/">Privacidad</a>
+        <a href="../terminos/">Términos</a>
+        <a href="../cookies/">Cookies</a>
+        <a href="../contacto/">Contacto</a>
+        <a href="../sobre-nosotros/">Sobre nosotros</a>
       </div>
     </div>
     <div class="base">© Tinta Piel · Tu cuenta, tus créditos y tus resultados se guardan en tu perfil.</div>
@@ -207,7 +212,7 @@ footer{margin-top:clamp(2.6rem,6vw,4rem);border-top:1px solid var(--line);backgr
 <div class="auth-overlay" id="authOverlay">
   <div class="auth-card">
     <button class="auth-close" id="authClose" aria-label="Cerrar">✕</button>
-    <h2 id="authTitle">Inicia sesión</h2>
+    <div class="auth-title" id="authTitle">Inicia sesión</div>
     <p class="asub">Necesitas una cuenta para comprar créditos con tarjeta.</p>
     <div class="auth-tabs">
       <button id="tabLogin" class="on">Iniciar sesión</button>
@@ -259,7 +264,7 @@ footer{margin-top:clamp(2.6rem,6vw,4rem);border-top:1px solid var(--line);backgr
     if (getToken()){
       var who = document.createElement('span'); who.className = 'who'; who.textContent = getEmail();
       var crd = document.createElement('span'); crd.className = 'crd'; crd.id = 'barCrd'; crd.textContent = 'Créditos: …';
-      var rec = document.createElement('a'); rec.className = 'rec'; rec.href = '../tools/probador/'; rec.textContent = 'Ir al probador';
+      var rec = document.createElement('a'); rec.className = 'rec'; rec.href = '../tools/simulador/'; rec.textContent = 'Ir al probador';
       var out = document.createElement('button'); out.type = 'button'; out.textContent = 'Salir';
       out.addEventListener('click', function(){ ls('tt:token', ''); renderAuthBar(); });
       authBar.appendChild(who); authBar.appendChild(crd); authBar.appendChild(rec); authBar.appendChild(out);

@@ -1,12 +1,80 @@
 {
   "redirects": [
-    { "source": "/pricing", "destination": "/pricing/", "permanent": true },
-    { "source": "/tools/probador", "destination": "/tools/probador/", "permanent": true },
-    { "source": "/tatuaje-de-leon-en-la-pierna-para-mujer", "destination": "/tatuaje-de-leon-en-la-pierna-para-mujer/", "permanent": true },
-    { "source": "/tatuaje-de-leona-en-la-pierna", "destination": "/tatuaje-de-leona-en-la-pierna/", "permanent": true },
-    { "source": "/tatuajes-de-leones-en-la-pierna", "destination": "/tatuajes-de-leones-en-la-pierna/", "permanent": true }
+    {
+      "source": "/pricing",
+      "destination": "/precios/",
+      "permanent": true
+    },
+    {
+      "source": "/pricing/:path*",
+      "destination": "/precios/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/precios",
+      "destination": "/precios/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/probador",
+      "destination": "/tools/simulador/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/probador/:path*",
+      "destination": "/tools/simulador/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/tools/simulador",
+      "destination": "/tools/simulador/",
+      "permanent": true
+    },
+    {
+      "source": "/tatuaje-de-leon-en-la-pierna-para-mujer",
+      "destination": "/tatuaje-de-leon-en-la-pierna-para-mujer/",
+      "permanent": true
+    },
+    {
+      "source": "/tatuaje-de-leona-en-la-pierna",
+      "destination": "/tatuaje-de-leona-en-la-pierna/",
+      "permanent": true
+    },
+    {
+      "source": "/tatuajes-de-leones-en-la-pierna",
+      "destination": "/tatuajes-de-leones-en-la-pierna/",
+      "permanent": true
+    },
+    {
+      "source": "/privacidad",
+      "destination": "/privacidad/",
+      "permanent": true
+    },
+    {
+      "source": "/terminos",
+      "destination": "/terminos/",
+      "permanent": true
+    },
+    {
+      "source": "/cookies",
+      "destination": "/cookies/",
+      "permanent": true
+    },
+    {
+      "source": "/contacto",
+      "destination": "/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/sobre-nosotros",
+      "destination": "/sobre-nosotros/",
+      "permanent": true
+    }
   ],
   "rewrites": [
-    { "source": "/api/v1/:path*", "destination": "https://admin.tintapiel.com/api/v1/:path*" }
+    {
+      "source": "/api/v1/:path*",
+      "destination": "https://admin.tintapiel.com/api/v1/:path*"
+    }
   ]
 }
