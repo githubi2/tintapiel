@@ -167,7 +167,7 @@ footer{margin-top:clamp(2.6rem,6vw,4rem);border-top:1px solid var(--line);backgr
   <section class="hero">
     <span class="kicker">Créditos y planes</span>
     <h1>Prueba tu tatuaje antes de hacerte el tatuaje</h1>
-    <p>El probador es gratis mientras tengas créditos: sube tu diseño, míralo sobre una foto real y genera el efecto sobre piel con IA. Cuando se te acaben, elige un plan aquí abajo.</p>
+    <p>El simulador es gratis mientras tengas créditos: sube tu diseño, míralo sobre una foto real y genera el efecto sobre piel con IA. Cuando se te acaben, elige un plan aquí abajo.</p>
     <div class="authbar" id="authBar"></div>
   </section>
 
@@ -264,7 +264,7 @@ footer{margin-top:clamp(2.6rem,6vw,4rem);border-top:1px solid var(--line);backgr
     if (getToken()){
       var who = document.createElement('span'); who.className = 'who'; who.textContent = getEmail();
       var crd = document.createElement('span'); crd.className = 'crd'; crd.id = 'barCrd'; crd.textContent = 'Créditos: …';
-      var rec = document.createElement('a'); rec.className = 'rec'; rec.href = '../tools/simulador/'; rec.textContent = 'Ir al probador';
+      var rec = document.createElement('a'); rec.className = 'rec'; rec.href = '../tools/simulador/'; rec.textContent = 'Ir al simulador';
       var out = document.createElement('button'); out.type = 'button'; out.textContent = 'Salir';
       out.addEventListener('click', function(){ ls('tt:token', ''); renderAuthBar(); });
       authBar.appendChild(who); authBar.appendChild(crd); authBar.appendChild(rec); authBar.appendChild(out);
