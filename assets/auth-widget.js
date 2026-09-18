@@ -40,7 +40,7 @@
     '.auth-overlay{position:fixed;inset:0;background:rgba(27,23,16,.45);display:flex;align-items:center;justify-content:center;z-index:60;opacity:0;pointer-events:none;transition:opacity .22s ease}',
     '.auth-overlay.open{opacity:1;pointer-events:auto}',
     '.auth-card{position:relative;width:min(400px,92vw);background:var(--surface,#FCFBF7);border:1px solid var(--line,#E4DECE);border-radius:18px;padding:22px;box-shadow:0 30px 80px -30px rgba(27,23,16,.5);color:var(--ink,#1B1710);font-family:inherit}',
-    '.auth-card h2{font-family:var(--serif,Georgia),serif;font-size:1.35rem;font-weight:800;margin:0 0 .3rem}',
+    '.auth-card h2,.auth-card .auth-title{font-family:var(--serif,Georgia),serif;font-size:1.35rem;font-weight:800;margin:0 0 .3rem}',
     '.auth-card p.asub{margin:0 0 14px;font-size:.8rem;color:var(--muted,#7A715F);line-height:1.5}',
     '.auth-tabs{display:flex;gap:6px;margin-bottom:14px}',
     '.auth-tabs button{flex:1;font:inherit;font-size:.78rem;font-weight:700;padding:.5rem;border-radius:9px;border:1.5px solid var(--line,#E4DECE);background:#fff;color:var(--muted,#7A715F);cursor:pointer}',
@@ -78,7 +78,7 @@
   wrap.id = 'authOverlay';
   wrap.innerHTML = '<div class="auth-card" role="dialog" aria-modal="true">' +
     '<button class="auth-close" id="authClose" aria-label="Cerrar">✕</button>' +
-    '<h2 id="authTitle">Inicia sesión</h2>' +
+    '<div class="auth-title" id="authTitle">Inicia sesión</div>' +
     '<p class="asub">Necesitas una cuenta para usar el efecto real con IA.</p>' +
     '<div class="auth-tabs"><button id="tabLogin" class="on">Iniciar sesión</button><button id="tabReg">Crear cuenta</button></div>' +
     '<div class="field"><label>Email</label><input type="email" id="fEmail" placeholder="tu@email.com" autocomplete="email"></div>' +
